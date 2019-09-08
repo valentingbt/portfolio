@@ -9,12 +9,8 @@
 export default {
   name: 'MenuButton',
   props: {
-    title: String
-  },
-  data () {
-    return {
-      image: require('../../assets/skill.svg')
-    }
+    title: String,
+    image: String
   }
 }
 </script>

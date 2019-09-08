@@ -1,8 +1,18 @@
 <template>
     <div class="row">
-      <MenuButton title="COMPETENCES" image="'../../assets/skill.svg'"/>
-      <MenuButton class="middle" title="EXPERIENCES"/>
-      <MenuButton title="PROJETS"/>
+
+      <router-link to="/skills">
+        <MenuButton title="COMPETENCES" :image="require('../../assets/skill.svg')"/>
+      </router-link>
+      
+      <router-link to="/experiences">
+        <MenuButton class="middle" title="EXPERIENCES" :image="require('../../assets/experience.svg')"/>
+      </router-link>
+      
+      <router-link to="/projects">
+        <MenuButton title="PROJETS" :image="require('../../assets/project.svg')"/>
+      </router-link>
+      
     </div>
 </template>
 

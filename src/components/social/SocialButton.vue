@@ -1,6 +1,6 @@
 <template>
-<div class="card">
-        <img src="../../assets/twitter.svg" alt="">
+<div class="card" :style="color" >
+        <img :src="icon" alt="">
 
       <p>{{ title }}</p>
 
@@ -12,6 +12,8 @@ export default {
   name: 'SocialButton',
   props: {
     title: String,
+    icon: String,
+    color: String
   }
 }
 </script>
@@ -21,7 +23,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
 .card {
     height: 40px;
-    background: #673ab7;
+    background: black;
     border-radius: 46px;
     display: flex;
     align-items: center;
