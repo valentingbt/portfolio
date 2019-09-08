@@ -1,8 +1,21 @@
 <template>
   <div class="about">
-    <h1>This is a skills page</h1>
+    <SkillCard />
+
   </div>
 </template>
+
+<script>
+
+import SkillCard from '../components/skills/SkillCard'
+
+export default {
+  name: 'skills',
+  components: {
+    SkillCard
+  }
+}
+</script>
 
 <style>
 html, body {
