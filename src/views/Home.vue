@@ -29,12 +29,6 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Baloo&display=swap');
 
-html, body {
-    background: #754cbd;
-    height: 100%;
-    margin: 0;
-}
-
 .back {
   height: 100%;
   background: #191155;

@@ -1,12 +1,10 @@
 <template>
   <div class="card">
       <div class="title">
-          Web
+          {{ title }}
       </div>
-      <div class="lines">
-        <SkillLine rating="3" skillName="HTML" />
-        <SkillLine rating="4" skillName="Javascript" />
-        <SkillLine rating="2" skillName="Angular" />
+      <div class="lines" v-for="item in items" v-bind:key="item">
+        <SkillLine :rating=item.rating :skillName=item.name />
       </div>
 
   </div>
@@ -19,6 +17,10 @@ export default {
 name:"SkillCard",
 components: {
     SkillLine
+},
+props : {
+    title: String,
+    items: Object
 }
 }
 </script>
@@ -27,7 +29,6 @@ components: {
 @import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
 
 .card {
-    width: 100%;
     border: 3px solid white;
     border-radius: 42px;
     padding: 0px 28px 30px 28px;

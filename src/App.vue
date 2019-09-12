@@ -4,7 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/skills">Compétences</router-link>
     </div>
-    <router-view/>
+    <router-view class="animated fadeIn"/>
   </div>
 </template>
 
