@@ -51,7 +51,7 @@ export default {
   margin: 0 30px 0 30px;
 }
 
-@media screen and (max-width: 1044px) {
+@media screen and (max-width: 1170px) {
   .row {
     flex-direction: column;
     justify-content: flex-start;
@@ -60,6 +60,13 @@ export default {
 
   .middle {
     margin: 20px 0 20px 0;
+  }
+
+  
+  a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 </style>

@@ -31,14 +31,20 @@ export default {
 .row {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+}
+
+a{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .middle {
-  margin: 0 30px 0 30px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
-@media screen and (max-width: 1044px) {
+@media screen and (max-width: 1170px) {
   .row {
     flex-direction: column;
     justify-content: flex-start;
@@ -46,7 +52,9 @@ export default {
   }
 
   .middle {
-    margin: 20px 0 20px 0;
+    margin-left: 0px;
+    margin-right: 0px;
   }
+
 }
 </style>

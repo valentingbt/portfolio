@@ -24,6 +24,7 @@ export default {
     background-color: rgba(103, 58, 183, 0.9);
     border-radius: 46px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px 0 10px 0;
 
     display: flex;
     flex-direction: column;
@@ -43,7 +44,7 @@ img {
   height: 80px;
 }
 
-@media screen and (max-width: 1044px) {
+@media screen and (max-width: 1170px) {
   .card {
     width: 90%;
     overflow: hidden;

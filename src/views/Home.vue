@@ -57,7 +57,7 @@ html, body {
   width: 1100px;
 }
 
-@media screen and (max-width: 1044px) {
+@media screen and (max-width: 1170px) {
   html, body {
     height: auto;
   }

@@ -22,6 +22,6 @@ html, body {
     background: #754cbd;
 }
 .app {
-  width: 400px;
+  width: 100%px;
 }
 </style>

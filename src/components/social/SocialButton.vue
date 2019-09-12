@@ -42,7 +42,7 @@ p {
     margin:0 15px 0 15px;
 }
 
-@media screen and (max-width: 1044px) {
+@media screen and (max-width: 1170px) {
   .card {
     width: 90%;
     overflow: hidden;
