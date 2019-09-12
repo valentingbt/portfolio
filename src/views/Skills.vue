@@ -1,7 +1,8 @@
 <template>
-  <div class="app">
-    <SkillCard />
-
+  <div class="skills">
+    <div class="col"><SkillCard /></div>
+    <div class="col"></div>
+    <div class="col"></div>
   </div>
 </template>
 
@@ -18,10 +19,13 @@ export default {
 </script>
 
 <style>
-html, body {
-    background: #754cbd;
+
+.skills {
+  width: 100%;
+  display: flex;
 }
-.app {
-  width: 100%px;
+
+.col {
+  flex: 1;
 }
 </style>

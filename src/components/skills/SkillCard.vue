@@ -19,12 +19,6 @@ export default {
 name:"SkillCard",
 components: {
     SkillLine
-},
-data () {
-    office: {
-        MS_word: 3;
-        MS_excel: 2;
-    }
 }
 }
 </script>

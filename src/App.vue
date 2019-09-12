@@ -4,11 +4,17 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/skills">Compétences</router-link>
     </div>
-    <router-view class="animated fadeIn"/>
+    <router-view/>
   </div>
 </template>
 
 <style>
+html, body {
+    background: #754cbd;
+    height: 100%;
+    margin: 0;
+}
+
 .app {
   height: 100%;
   width: 100%;

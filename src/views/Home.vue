@@ -30,6 +30,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Baloo&display=swap');
 
 html, body {
+    background: #754cbd;
     height: 100%;
     margin: 0;
 }
