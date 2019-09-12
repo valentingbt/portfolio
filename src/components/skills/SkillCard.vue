@@ -1,8 +1,7 @@
 <template>
   <div class="card">
       <div class="title">
-          <p>Web</p>
-          
+          Web
       </div>
       <div class="lines">
         <SkillLine rating="3" skillName="HTML" />
@@ -31,21 +30,18 @@ components: {
     width: 100%;
     border: 3px solid white;
     border-radius: 42px;
-
-    padding: 40px 28px 40px 28px;
-    margin: 10px
+    padding: 0px 28px 30px 28px;
+    margin: 20px 10px 10px 10px;
 }
 
 .title {
-    top: -60px;
+    top: -20px;
     background-color: #754cbd;
     position: relative;
-}
 
-    p {
-        color: white;
-        font-family: 'Lexend Deca', sans-serif;
-        font-size: 2em;
-        margin: 0;
-    }
+    color: white;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 2em;
+    text-align: center;
+}
 </style>

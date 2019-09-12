@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="app">
     <SkillCard />
 
   </div>
@@ -17,9 +17,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 html, body {
     background: #754cbd;
-    width: 60%;
+}
+.app {
+  width: 400px;
 }
 </style>
