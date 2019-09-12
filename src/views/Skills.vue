@@ -17,8 +17,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 html, body {
     background: #754cbd;
+    width: 60%;
 }
 </style>

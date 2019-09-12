@@ -2,21 +2,28 @@
   <div id="app">
     <!-- <HelloWorld msg="Valentin Guibert"/> -->
     <div class="row">
-      <SocialButton 
-        title="@VGuibert" 
-        :icon="require('../../assets/twitter.svg')" 
-        :color="'background:#6dcff6'"/>
+      <a href="https://twitter.com/VGuibert" target="_blank">
+          <SocialButton 
+          title="@VGuibert" 
+          :icon="require('../../assets/twitter.svg')" 
+          :color="'background:#6dcff6'"/>
+      </a>
 
-      <SocialButton 
-        class="middle" 
-        title="valentinguibert@ynov.com" 
-        :icon="require('../../assets/email.svg')" 
-        :color="'background:#6dbef6'"/>
+      <a href="mailto:valentin.guibert@ynov.com">
+          <SocialButton 
+            class="middle" 
+            title="valentinguibert@ynov.com" 
+            :icon="require('../../assets/email.svg')" 
+            :color="'background:#6dbef6'"/>
+      </a>
 
-      <SocialButton 
-        title="valentingbt" 
-        :icon="require('../../assets/github.svg')"
-        :color="'background:#00a6f3'"/>
+
+      <a href="https://github.com/valentingbt" target="_blank">
+        <SocialButton 
+          title="valentingbt" 
+          :icon="require('../../assets/github.svg')"
+          :color="'background:#00a6f3'"/>
+      </a>
     </div>
 
   </div>
