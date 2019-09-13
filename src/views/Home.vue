@@ -103,7 +103,7 @@ export default {
 }
 
 .stars {
-  background: #191155 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  background: #191155 url(../assets/stars.png) repeat top center;
   z-index: 1;
 }
 

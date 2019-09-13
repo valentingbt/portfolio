@@ -30,6 +30,12 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
+}
+
+.card:hover {
+  filter: brightness(1.20);
+  transition: 0.5s;
 }
 
 p {

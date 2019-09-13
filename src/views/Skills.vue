@@ -8,11 +8,30 @@
         <SkillCard title="Design" :items="design"/>
         </div>
       <div class="col">
-        <SkillCard title="Web" :items="web"/>
+        <SkillCard class="middle-col" title="Web" :items="web"/>
       </div>
       <div class="col">
         <SkillCard title="Software" :items="software"/>
-        <SkillCard title="Software" :items="software"/>
+        <SkillCard title="Langues" :items="software"/>
+      </div>
+    </div>
+    <div class="other">
+      <p class="other-title">Autres compétences</p>
+      <div class="other-buttons">
+        <SocialButton class="button"
+          title="git" 
+          :icon="require('../assets/git.svg')"
+          :color="'background:#00a6f3'"/>
+
+          <SocialButton class="button"
+          title="SLQ" 
+          :icon="require('../assets/sql.png')"
+          :color="'background:#00a6f3'"/>
+
+          <SocialButton class="button"
+          title="NoSQL" 
+          :icon="require('../assets/mongo.png')"
+          :color="'background:#00a6f3'"/>
       </div>
     </div>
 
@@ -22,11 +41,13 @@
 <script>
 
 import SkillCard from '../components/skills/SkillCard'
+import SocialButton from '../components/social/SocialButton.vue'
 
 export default {
   name: 'skills',
   components: {
-    SkillCard
+    SkillCard,
+    SocialButton
   },
 data() {
     return {
@@ -125,11 +146,38 @@ data() {
 .columns {
   width: 100%;
   display: flex;
-  margin-top:80px;
+  margin-top:30px;
+  height: 100%;
 }
 
 .col {
   flex: 1;
+  height: 100%;
+}
+
+.middle-col {
+  height: 100%;
+}
+
+/* "OTHER" PART */
+.other {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.other-buttons {
+  display: flex;
+}
+
+.button {
+  margin-right:20px;
+}
+
+.other-title {
+    color: white;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 2em;
+    width: 100%;
 }
 
 .quit {
@@ -142,4 +190,19 @@ data() {
   height: 20px;
   margin: 20px;
 }
+
+@media screen and (max-width: 1170px) {
+  .columns {
+    flex-wrap: wrap;
+  }
+
+  .other-buttons {
+    flex-direction: column;
+  }
+
+  .button {
+    margin: 10px 0 10px 0;
+  }
+}
+
 </style>
