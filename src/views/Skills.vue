@@ -12,7 +12,7 @@
       </div>
       <div class="col">
         <SkillCard title="Software" :items="software"/>
-        <SkillCard title="Langues" :items="software"/>
+        <SkillCard title="Langues" :items="language"/>
       </div>
     </div>
     <div class="other">
@@ -128,6 +128,21 @@ data() {
             }
 
     ],
+    language: [
+            { 
+                name:"Français",
+                rating:5
+            },
+            {
+                name:"Anglais",
+                rating:4
+            },
+            {
+                name:"Espagnol",
+                rating:3
+            }
+
+    ]
 
     }
   }
@@ -152,17 +167,16 @@ data() {
 
 .col {
   flex: 1;
-  height: 100%;
 }
 
 .middle-col {
-  height: 100%;
+  height: 525px;
 }
 
 /* "OTHER" PART */
 .other {
     margin-left: 20px;
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .other-buttons {
@@ -194,6 +208,10 @@ data() {
 @media screen and (max-width: 1170px) {
   .columns {
     flex-wrap: wrap;
+  }
+
+  .middle-col {
+  height: auto;
   }
 
   .other-buttons {
