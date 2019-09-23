@@ -29,4 +29,23 @@ a {
   text-decoration: none;
 }
 
+/* Title and quit */
+.title {
+    color: white;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 2em;
+    text-align: center;
+}
+
+.quit {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.cross {
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+}
+
 </style>

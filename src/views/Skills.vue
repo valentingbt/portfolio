@@ -151,13 +151,6 @@ data() {
 
 <style>
 
-.title {
-    color: white;
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 2em;
-    text-align: center;
-}
-
 .columns {
   width: 100%;
   display: flex;
@@ -192,17 +185,6 @@ data() {
     font-family: 'Lexend Deca', sans-serif;
     font-size: 2em;
     width: 100%;
-}
-
-.quit {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-.cross {
-  width: 20px;
-  height: 20px;
-  margin: 20px;
 }
 
 @media screen and (max-width: 1170px) {
