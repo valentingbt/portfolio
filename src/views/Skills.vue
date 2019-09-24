@@ -4,15 +4,15 @@
     <div class="title">COMPETENCES</div>
     <div class="columns">
       <div class="col">
-        <SkillCard title="Office" :items="office"/>
-        <SkillCard title="Design" :items="design"/>
+        <SkillCard title="Office" :items="skills.office"/>
+        <SkillCard title="Design" :items="skills.design"/>
         </div>
       <div class="col">
-        <SkillCard class="middle-col" title="Web" :items="web"/>
+        <SkillCard class="middle-col" title="Web" :items="skills.web"/>
       </div>
       <div class="col">
-        <SkillCard title="Software" :items="software"/>
-        <SkillCard title="Langues" :items="language"/>
+        <SkillCard title="Software" :items="skills.software"/>
+        <SkillCard title="Langues" :items="skills.language"/>
       </div>
     </div>
     <div class="other">
@@ -42,6 +42,7 @@
 
 import SkillCard from '../components/skills/SkillCard'
 import SocialButton from '../components/social/SocialButton.vue'
+import skillData from '../assets/data/skills.json'
 
 export default {
   name: 'skills',
@@ -51,99 +52,7 @@ export default {
   },
 data() {
     return {
-        office: [
-            { 
-                name:"Microsoft Word",
-                rating:5 
-            },
-            {
-                name:"Microsoft Excel",
-                rating:5
-            },
-            {
-                name:"Microsoft Powerpoint",
-                rating:5
-            }
-
-    ],
-    design: [
-            { 
-                name:"Adobe Photoshop",
-                rating:4
-            },
-            {
-                name:"Adobe Illustrator",
-                rating:4
-            },
-            {
-                name:"Adode XD",
-                rating:4
-            }
-
-    ],
-    web: [
-            { 
-                name:"HTML/CSS",
-                rating:5
-            },
-            {
-                name:"Angular",
-                rating:4
-            },
-            {
-                name:"Ionic",
-                rating:4
-            },
-            {
-                name:"VueJS",
-                rating:4
-            },
-            {
-                name:"NodeJS",
-                rating:4
-            },
-            {
-                name:"PHP",
-                rating:3
-            },
-            {
-                name:"Symfony",
-                rating:3
-            },
-            
-
-    ],
-    software: [
-            { 
-                name:"Java",
-                rating:3
-            },
-            {
-                name:"Scripting Linux",
-                rating:3
-            },
-            {
-                name:"Python",
-                rating:2
-            }
-
-    ],
-    language: [
-            { 
-                name:"Français",
-                rating:5
-            },
-            {
-                name:"Anglais",
-                rating:4
-            },
-            {
-                name:"Espagnol",
-                rating:3
-            }
-
-    ]
-
+      skills: skillData
     }
   }
 }

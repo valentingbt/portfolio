@@ -1,0 +1,94 @@
+{
+    "office": [
+    { 
+        "name":"Microsoft Word",
+        "rating":5 
+    },
+    {
+        "name":"Microsoft Excel",
+        "rating":5
+    },
+    {
+        "name":"Microsoft Powerpoint",
+        "rating":5
+    }
+
+],
+"design": [
+    { 
+        "name":"Adobe Photoshop",
+        "rating":4
+    },
+    {
+        "name":"Adobe Illustrator",
+        "rating":4
+    },
+    {
+        "name":"Adode XD",
+        "rating":4
+    }
+
+],
+"web": [
+    { 
+        "name":"HTML/CSS",
+        "rating":5
+    },
+    {
+        "name":"Angular",
+        "rating":4
+    },
+    {
+        "name":"Ionic",
+        "rating":4
+    },
+    {
+        "name":"VueJS",
+        "rating":4
+    },
+    {
+        "name":"NodeJS",
+        "rating":4
+    },
+    {
+        "name":"PHP",
+        "rating":3
+    },
+    {
+        "name":"Symfony",
+        "rating":3
+    }
+    
+
+],
+"software": [
+    { 
+        "name":"Java",
+        "rating":3
+    },
+    {
+        "name":"Scripting Linux",
+        "rating":3
+    },
+    {
+        "name":"Python",
+        "rating":2
+    }
+
+],
+"language": [
+    { 
+        "name":"Français",
+        "rating":5
+    },
+    {
+        "name":"Anglais",
+        "rating":4
+    },
+    {
+        "name":"Espagnol",
+        "rating":3
+    }
+
+]
+}
