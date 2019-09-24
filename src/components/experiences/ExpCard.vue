@@ -1,16 +1,13 @@
 <template>
   <div class="card">
       <div class="card-header">
-        <div class="date">MAI 2018 - AUJOURD'HUI</div>
-        <div class="company">La Cabane à Burger</div>
-        <div class="city">Pontchâteau</div>
+        <div class="date">{{ date }}</div>
+        <div class="company">{{ company }}</div>
+        <div class="city">{{ city }}</div>
       </div>
         <hr>
       <div class="descri">
-            CDI dans la vente et fabrication
-            de burgers maison tous les week
-            ends. Montage des hamburgers, 
-            cuisson de steaks et caisse.
+            {{ description }}
       </div>
       
 
@@ -19,7 +16,13 @@
 
 <script>
 export default {
-name:"ExpCard"
+name:"ExpCard",
+props: {
+  date: String,
+  company: String,
+  city: String,
+  description: String
+}
 }
 </script>
 

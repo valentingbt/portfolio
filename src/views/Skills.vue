@@ -150,12 +150,19 @@ data() {
 </script>
 
 <style>
+html, body {
+    overflow: hidden;
+}
+.skills {
+  background: #754cbd;
+  border-radius: 30px 30px 0 0;
+  height: 100%;
+}
 
 .columns {
   width: 100%;
   display: flex;
   margin-top:30px;
-  height: 100%;
 }
 
 .col {
@@ -188,6 +195,10 @@ data() {
 }
 
 @media screen and (max-width: 1170px) {
+
+  html, body {
+    overflow: unset;
+}
   .columns {
     flex-wrap: wrap;
   }

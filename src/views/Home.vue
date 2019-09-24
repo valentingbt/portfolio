@@ -1,14 +1,9 @@
 <template>
-<div class="back">
     <div class="home">
     <img class="name" src="@/assets/name.svg" alt="">
     <SocialRow class="middle"/>
     <MenuRow/>
   </div>
-  <div class="sky"></div>
-  <div class="twinkling"></div>
-  <div class="stars"></div>
-</div>
 
 </template>
 
@@ -29,10 +24,6 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Baloo&display=swap');
 
-.back {
-  height: 100%;
-  background: #191155;
-}
 .home {
   height: 100%;
   display: flex;
@@ -44,8 +35,8 @@ export default {
   text-align: center;
   color: white;
 
-  position: relative;
-  z-index: 5;
+  /*position: relative;
+  z-index: 5;*/
 }
 
 .name {

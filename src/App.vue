@@ -1,18 +1,71 @@
 <template>
   <div class="app">
-    <div class="nav">
+    <!--<div class="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/skills">Compétences</router-link>
-    </div>
-    <router-view class="animated fadeIn"/>
+    </div> -->
+    <router-view class="view"/>
+  <div class="sky"></div>
+  <div class="twinkling"></div>
+  <div class="stars"></div>
   </div>
 </template>
 
 <style>
 html, body {
-    background: #754cbd;
+    /*background: #754cbd;*/
+    background: #191155;
     height: 100%;
     margin: 0;
+}
+
+.view {
+  position: relative;
+  z-index: 5;
+}
+
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+.stars,
+.twinkling,
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.stars {
+  background: #191155 url(./assets/stars.png) repeat top center;
+  z-index: 1;
+}
+
+.twinkling {
+  background: url(./assets/twinkling.png) repeat top center;
+  z-index: 2;
+  -webkit-animation: move-twink-back 200s linear infinite;
+  animation: move-twink-back 200s linear infinite;
 }
 
 .app {
@@ -45,7 +98,7 @@ a {
 .cross {
   width: 20px;
   height: 20px;
-  margin: 20px;
+  margin: 25px 30px 0px 0px;
 }
 
 </style>
