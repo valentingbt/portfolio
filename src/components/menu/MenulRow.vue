@@ -9,8 +9,8 @@
         <MenuButton class="middle" title="EXPERIENCES" :image="require('../../assets/experience.svg')"/>
       </router-link>
       
-      <router-link to="/projects">
-        <MenuButton title="PROJETS" :image="require('../../assets/project.svg')"/>
+      <router-link to="/about">
+        <MenuButton title="INFOS" :image="require('../../assets/information.svg')"/>
       </router-link>
       
     </div>
