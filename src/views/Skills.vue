@@ -60,7 +60,7 @@ data() {
 
 <style>
 html, body {
-    overflow: hidden;
+    overflow: unset;
 }
 .skills {
   background: #754cbd;

@@ -1,56 +1,63 @@
 <template>
   <div class="card">
+      <img class="dot" src="@/assets/dot.svg" alt="">
+    <div class="body">
       <div class="card-header">
         <div class="date">{{ date }}</div>
         <div class="company">{{ company }}</div>
         <div class="city">{{ city }}</div>
       </div>
-        <hr>
-      <div class="descri">
-            {{ description }}
-      </div>
-      
-
+      <hr />
+      <div class="descri">{{ description }}</div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-name:"ExpCard",
-props: {
-  date: String,
-  company: String,
-  city: String,
-  description: String
-}
-}
+  name: "ExpCard",
+  props: {
+    date: String,
+    company: String,
+    city: String,
+    description: String
+  }
+};
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap");
 
 .card {
-    width: 60%;
-    border: 3px solid white;
-    border-radius: 42px;
-    padding: 20px 20px 20px 20px;
-    margin: 50px 10px 10px 10px;
+    margin: 30px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.body {
+  width: 350px;
+  border: 3px solid white;
+  border-radius: 42px;
+  padding: 20px 20px 20px 20px;
 
-    color: white;
-    font-family: 'Lexend Deca', sans-serif;
+
+  color: white;
+  font-family: "Lexend Deca", sans-serif;
 }
 
+.dot {
+  width: 10px;
+  margin-right: 20px;
+}
 hr {
-    margin: 20px 0 20px 0;
+  margin: 20px 0 20px 0;
 }
 
 .date {
-    font-size: 1.7em;
+  font-size: 1.7em;
 }
 
 .company {
-    font-size: 1.5em;
+  font-size: 1.4em;
 }
-
-
 </style>
