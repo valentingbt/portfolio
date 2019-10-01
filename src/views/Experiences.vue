@@ -1,9 +1,7 @@
 <template>
-  <div class="experiences">
+  <div class="experiences animated" :class="animation2">
     <div class="quit">
-      <router-link to="/">
-        <img class="cross" src="../assets/close.svg" alt />
-      </router-link>
+      <img @click="leavePage" class="cross" src="../assets/close.svg" alt />
     </div>
     <div class="columns">
       <div class="col">
@@ -37,7 +35,7 @@
             :diploma="diploma.diploma"
             :option="diploma.option"
             :description="diploma.description"
-           />
+          />
         </div>
       </div>
     </div>
@@ -49,6 +47,7 @@ import ExpCard from "../components/experiences/ExpCard";
 import DipCard from "../components/experiences/DipCard";
 
 import expData from "../assets/data/experiences.json"; // import data from json
+import router from "../router";
 
 export default {
   name: "experiences",
@@ -60,18 +59,24 @@ export default {
     return {
       companies: expData.companies,
       schools: expData.schools,
-      diplomas: expData.diplomas
+      diplomas: expData.diplomas,
+      animation2: "slideInUp"
     };
+  },
+  methods: {
+    leavePage() {
+      this.animation2 = "slideOutDown";
+      setTimeout(() => router.push("/"), 500);
+    }
+  },
+  mounted() {
+    const el = document.body;
+    setTimeout(() => el.classList.remove("over").bind(this), 1100);
   }
 };
 </script>
 
 <style>
-html,
-body {
-  overflow: unset;
-}
-
 .experiences {
   background: #754cbd;
   border-radius: 30px 30px 0 0;

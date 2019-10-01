@@ -1,6 +1,6 @@
 <template>
-    <div class="home">
-    <!--<img class="name" src="@/assets/name.svg" alt="">-->
+    <div class="home animated fast" :class="animation">
+    <img class="name" src="@/assets/name.svg" alt="">
     <SocialRow class="middle"/>
     <MenuRow/>
   </div>
@@ -17,12 +17,28 @@ export default {
   components: {
     MenuRow,
     SocialRow
-  }
+  },
+    data() {
+    return {
+      animation: "fadeIn"
+    };
+  },
+  beforeRouteLeave(to, from, next) {
+  const el = document.body;
+  el.classList.add("over");
+  this.animation = "fadeOut"
+  setTimeout(() => next(), 600);
 }
+}
+
 </script>
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Baloo&display=swap');
+
+.over {
+  overflow: hidden;
+}
 
 .home {
   height: 100%;

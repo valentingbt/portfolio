@@ -107,19 +107,25 @@ a {
   margin: 25px 30px 0px 0px;
 }
 
+.cross:hover {
+  cursor: pointer;
+}
+
+/* scrollbar */
+
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 1px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #754cbd;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #888;
 }
 
 /* Handle on hover */

@@ -1,40 +1,46 @@
 <template>
-    <div class="row">
+  <div class="row">
+    <router-link to="/skills">
+      <MenuButton
+        @click.native="leavePage"
+        title="COMPETENCES"
+        :image="require('../../assets/skill.svg')"
+      />
+    </router-link>
 
-      <router-link to="/skills">
-        <MenuButton title="COMPETENCES" :image="require('../../assets/skill.svg')"/>
-      </router-link>
-      
-      <router-link to="/experiences">
-        <MenuButton class="middle" title="EXPERIENCES" :image="require('../../assets/experience.svg')"/>
-      </router-link>
-      
-      <router-link to="/about">
-        <MenuButton title="INFOS" :image="require('../../assets/information.svg')"/>
-      </router-link>
-      
-    </div>
+    <router-link to="/experiences">
+      <MenuButton
+        class="middle"
+        title="EXPERIENCES"
+        :image="require('../../assets/experience.svg')"
+      />
+    </router-link>
+
+    <router-link to="/about">
+      <MenuButton title="INFOS" :image="require('../../assets/information.svg')" />
+    </router-link>
+  </div>
 </template>
 
 <script>
-import MenuButton from './MenuButton.vue'
+import MenuButton from "./MenuButton.vue";
 
 export default {
-  name: 'MenuRow',
+  name: "MenuRow",
   components: {
     MenuButton
   }
-}
+};
 </script>
 
 <style scoped>
-.row {
+a {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 
-a{
-  width: 100%;
+.row {
   display: flex;
   justify-content: center;
 }
@@ -55,6 +61,5 @@ a{
     margin-left: 0px;
     margin-right: 0px;
   }
-
 }
 </style>
