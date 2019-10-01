@@ -3,7 +3,7 @@
     <div class="quit">
       <img @click="leavePage" class="cross" src="../assets/close.svg" alt />
     </div>
-    <div class="columns">
+    <div class="columns animated fadeInUp">
       <div class="col">
         <div class="title">Etudes</div>
         <div v-for="school in schools" v-bind:key="school">

@@ -4,7 +4,7 @@
       <img @click="leavePage" class="cross" src="../assets/close.svg" alt />
     </div>
     <div class="title">COMPETENCES</div>
-    <div class="columns">
+    <div class="columns animated fadeInUp">
       <div class="col">
         <SkillCard title="Office" :items="skills.office" />
         <SkillCard title="Design" :items="skills.design" />
@@ -17,7 +17,7 @@
         <SkillCard title="Langues" :items="skills.language" />
       </div>
     </div>
-    <div class="other">
+    <div class="other animated fadeInUp">
       <p class="other-title">Autres compétences</p>
       <div class="other-buttons">
         <SocialButton

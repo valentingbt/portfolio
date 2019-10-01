@@ -4,11 +4,11 @@
       <img @click="leavePage" class="cross" src="../assets/close.svg" alt />
     </div>
     <div class="title">INFOS</div>
-    <div class="prez">
+    <div class="prez animated fadeInUp">
       <img src="@/assets/photo.png" alt />
 
       <p class="prez-text">
-        <span class="hello">Bonjour !</span>
+        <span class="hello">Bonjour ! <br></span>
         <span class="i-am">Je suis Valentin Guibert,</span>
         j’ai 21 ans et je suis étudiant en troisième année
         en école d’ingénierie informatique à Nantes pour devenir développeur
@@ -18,11 +18,10 @@
       </p>
     </div>
 
-    <div class="contact">
+    <div class="contact animated fadeInUp">
       <p>N'hésitez pas à me contacter !</p>
+      <p>Ce site est encore en construction. Créé avec le ❤️ grâce au super framewok VueJS.</p>
     </div>
-
-    <p>Ce site est encore en construction. Créé avec le ❤️ grâce au super framewok VueJS.</p>
   </div>
 </template>
 
