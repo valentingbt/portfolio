@@ -19,6 +19,12 @@ html, body {
     margin: 0;
 }
 
+p {
+  color: white;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1em;
+}
+
 .view {
   position: relative;
   z-index: 5;

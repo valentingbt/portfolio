@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-    <img class="name" src="@/assets/name.svg" alt="">
+    <!--<img class="name" src="@/assets/name.svg" alt="">-->
     <SocialRow class="middle"/>
     <MenuRow/>
   </div>
