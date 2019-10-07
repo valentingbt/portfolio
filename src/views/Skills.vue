@@ -22,14 +22,14 @@
       <div class="other-buttons">
         <SocialButton
           class="button"
-          title="git"
+          title="Git"
           :icon="require('../assets/git.svg')"
           :color="'background:#00a6f3'"
         />
 
         <SocialButton
           class="button"
-          title="SLQ"
+          title="SQL"
           :icon="require('../assets/sql.png')"
           :color="'background:#00a6f3'"
         />
@@ -99,8 +99,8 @@ export default {
 
 /* "OTHER" PART */
 .other {
-  margin-left: 20px;
-  margin-bottom: 30px;
+  padding-left: 20px;
+  padding-bottom: 30px;
 }
 
 .other-buttons {

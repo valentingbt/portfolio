@@ -57,6 +57,7 @@ export default {
 
 .name {
   width: 1100px;
+  font-family: baloo;
 }
 
 @media screen and (max-width: 1170px) {

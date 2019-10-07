@@ -13,7 +13,6 @@
 
 <style>
 html, body {
-    /*background: #754cbd;*/
     background: #191155;
     height: 100%;
     margin: 0;
