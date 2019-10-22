@@ -5,7 +5,7 @@
     </div>
     <div class="title">INFOS</div>
     <div class="prez animated fadeInUp">
-      <img src="@/assets/photo.png" alt />
+      <img src="@/assets/photo.svg" alt />
 
       <p class="prez-text">
         <span class="hello">Bonjour ! <br></span>
