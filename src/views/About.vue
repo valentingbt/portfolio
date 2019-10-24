@@ -4,9 +4,8 @@
       <img @click="leavePage" class="cross" src="../assets/close.svg" alt />
     </div>
     <div class="title">INFOS</div>
+    <img class="profil_pic animated fadeInDown" src="@/assets/photo.svg" alt />
     <div class="prez animated fadeInUp">
-      <img src="@/assets/photo.svg" alt />
-
       <p class="prez-text">
         <span class="hello">Bonjour ! <br></span>
         <span class="i-am">Je suis Valentin Guibert,</span>
@@ -20,7 +19,7 @@
 
     <div class="contact animated fadeInUp">
       <p>N'hésitez pas à me contacter !</p>
-      <p>Ce site est encore en construction. Créé avec le ❤️ grâce au super framewok VueJS.</p>
+      <p>Ce site est encore en construction mais il s'améliore de jours en jours. Créé avec le ❤️ grâce au super framewok VueJS.</p>
     </div>
   </div>
 </template>
@@ -55,21 +54,30 @@ export default {
   height: 100%;
 }
 
+.profil_pic {
+  position: relative;
+  background-color: #754cbd;
+  padding: 10px;
+  width: 150px;
+  bottom: -90px;
+  margin-left: 60px;
+  z-index: 1;
+}
 .prez {
   margin-left: 20px;
   margin-bottom: 30px;
-  margin-top: 100px;
+  /*margin-top: 100px;*/
   padding: 40px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
+
+  border: 3px solid white;
+  border-radius: 30px;
 }
 
 .prez-text {
   font-size: 1.5em;
   /*width: 1000px;*/
   margin-left: 20px;
+  margin-top: 40px;
 }
 
 .hello {
