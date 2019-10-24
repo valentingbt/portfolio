@@ -83,12 +83,6 @@ export default {
   height: 100%;
 }
 
-.columns {
-  width: 100%;
-  display: flex;
-  margin-top: 30px;
-}
-
 .col {
   flex: 1;
 }
@@ -122,9 +116,6 @@ export default {
   html,
   body {
     overflow: unset;
-  }
-  .columns {
-    flex-wrap: wrap;
   }
 
   .middle-col {

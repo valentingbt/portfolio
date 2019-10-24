@@ -87,6 +87,14 @@ a {
   text-decoration: none;
 }
 
+/* Pages with columns */
+
+.columns {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+}
+
 /* Title and quit */
 .title {
     color: white;

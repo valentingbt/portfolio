@@ -82,12 +82,6 @@ export default {
   border-radius: 30px 30px 0 0;
 }
 
-.columns {
-  width: 100%;
-  display: flex;
-  margin-top: 30px;
-}
-
 .col {
   flex: 1;
 }
