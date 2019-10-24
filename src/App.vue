@@ -140,4 +140,12 @@ a {
   background: #555; 
 }
 
+/* Mobile */
+
+@media screen and (max-width: 1170px) {
+  .columns {
+    flex-wrap: wrap;
+  }
+}
+
 </style>

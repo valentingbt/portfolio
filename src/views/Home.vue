@@ -1,6 +1,9 @@
 <template>
     <div class="home animated fast" :class="animation">
-    <img class="name" src="@/assets/name.svg" alt="">
+      <div class="profil">
+          <img class="name" src="@/assets/name.svg" alt="">
+          <div class="statut">étudiant en développement web</div>
+      </div>
     <SocialRow class="middle"/>
     <MenuRow/>
   </div>
@@ -55,9 +58,26 @@ export default {
   z-index: 5;*/
 }
 
+.profil {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .name {
   width: 1100px;
   font-family: baloo;
+}
+
+.statut {
+  width: fit-content;
+  border: 1.5px solid white;
+  border-radius: 30px;
+  color: white;
+  font-family: 'Lexend Deca', sans-serif;
+  padding: 2px 11px 2px 11px;
+  margin-top:10px;
+  font-size: 1.2em;
 }
 
 @media screen and (max-width: 1170px) {
