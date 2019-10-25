@@ -5,7 +5,7 @@
     </div>
     <div class="title">INFOS</div>
     <img class="profil_pic animated fadeInDown" src="@/assets/photo.svg" alt />
-    <div class="prez animated fadeInUp">
+    <div class="prez animated fadeInUp border">
       <p class="prez-text">
         <span class="hello">Bonjour ! <br></span>
         <span class="i-am">Je suis Valentin Guibert,</span>
@@ -16,10 +16,10 @@
         <br />Je suis actuellement à la recherche d'une alternance !
       </p>
     </div>
+      <img class="logo animated fadeInDown" src="@/assets/logo.png" alt="">
+    <div class="contact animated fadeInUp border">
 
-    <div class="contact animated fadeInUp">
-      <p>N'hésitez pas à me contacter !</p>
-      <p>Ce site est encore en construction mais il s'améliore de jours en jours. Créé avec le ❤️ grâce au super framewok VueJS.</p>
+      <p>Ce site est encore en construction mais il s'améliore de jours en jours. Toutes les données ne sont <strong>pas</strong> codées en dur mais sont bien stockées dans des objets JSON de manière à être facilement éditables. Créé avec le ❤️ grâce au super framewok VueJS.</p>
     </div>
   </div>
 </template>
@@ -52,6 +52,7 @@ export default {
   background: #754cbd;
   border-radius: 30px 30px 0 0;
   height: 100%;
+  padding: 0 30px 0 30px;
 }
 
 .profil_pic {
@@ -64,13 +65,12 @@ export default {
   z-index: 1;
 }
 .prez {
-  margin-left: 20px;
-  margin-bottom: 30px;
-  /*margin-top: 100px;*/
   padding: 40px;
+}
 
+.border {
   border: 3px solid white;
-  border-radius: 30px;
+  border-radius: 42px;
 }
 
 .prez-text {
@@ -88,8 +88,18 @@ export default {
   font-size: 1.4em;
 }
 
+.logo {
+  width: 80px;
+  position: relative;
+  background-color: #754cbd;
+  padding: 10px;
+  bottom: -50px;
+  margin-left: 60px;
+  z-index: 1;
+}
+
 .contact {
-  text-align: center;
   font-size: 1.4em;
+  padding: 20px 20px 10px 20px;
 }
 </style>
