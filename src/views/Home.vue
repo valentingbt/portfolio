@@ -2,7 +2,8 @@
     <div class="home animated fast" :class="animation">
       <div class="profil">
           <img class="name" src="@/assets/name.svg" alt="">
-          <div class="statut">étudiant en développement web</div>
+          <div :class="bounce" class="statut" @click="changeStatut">{{statut[i]}}</div>
+          
       </div>
     <SocialRow class="middle"/>
     <MenuRow/>
@@ -23,8 +24,22 @@ export default {
   },
     data() {
     return {
-      animation: "fadeIn"
+      animation: "fadeIn",
+      bounce: "",
+      statut: ["étudiant en développement web", "binge-watcher sur Netflix", "voyageur dans l'âme","chocolat addict"],
+      i:0
     };
+  },
+  methods: {
+    changeStatut() {
+      this.bounce = "animated bounceIn faster";
+      setTimeout(() =>this.bounce = "",500 );
+      if (this.i <= this.statut.length-2) {
+        this.i = this.i+1;
+      } else {
+        this.i = 0;
+      }
+    }
   },
   beforeRouteLeave(to, from, next) {
   const el = document.body;
