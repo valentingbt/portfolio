@@ -1,58 +1,76 @@
 <template>
-    <div class="home animated fast" :class="animation">
-      <div class="profil">
-          <img class="name" src="@/assets/name.svg" alt="">
-          <div :class="bounce" class="statut" @click="changeStatut">{{statut[i]}}</div>
-          
-      </div>
-    <SocialRow class="middle"/>
-    <MenuRow/>
-  </div>
+  <div class="home animated fast" :class="animation">
+    <div class="profil">
 
+      <div class="settings">
+        <div class="setting">
+          <div>dark</div>
+          <div>light</div>
+          <div>fancy</div>
+        </div>
+        <div class="hr-y"></div>
+        <div class="setting">
+          <div>français</div>
+          <div>english</div>
+        </div>
+      </div>
+
+      <img class="name" src="@/assets/name.svg" alt />
+
+
+      <div :class="bounce" class="statut" @click="changeStatut">{{statut[i]}}</div>
+    </div>
+    <SocialRow class="middle" />
+    <MenuRow />
+  </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import MenuRow from '@/components/menu/MenulRow'
-import SocialRow from '@/components/social/SocialRow'
+import MenuRow from "@/components/menu/MenulRow";
+import SocialRow from "@/components/social/SocialRow";
 
 export default {
-  name: 'home',
+  name: "home",
   components: {
     MenuRow,
     SocialRow
   },
-    data() {
+  data() {
     return {
       animation: "fadeIn",
       bounce: "",
-      statut: ["étudiant en développement web", "binge-watcher sur Netflix", "voyageur dans l'âme","chocolat addict"],
-      i:0
+      statut: [
+        "étudiant en développement web",
+        "binge-watcher sur Netflix",
+        "voyageur dans l'âme",
+        "chocolat addict"
+      ],
+      i: 0
     };
   },
   methods: {
     changeStatut() {
       this.bounce = "animated bounceIn faster";
-      setTimeout(() =>this.bounce = "",500 );
-      if (this.i <= this.statut.length-2) {
-        this.i = this.i+1;
+      setTimeout(() => (this.bounce = ""), 500);
+      if (this.i <= this.statut.length - 2) {
+        this.i = this.i + 1;
       } else {
         this.i = 0;
       }
     }
   },
   beforeRouteLeave(to, from, next) {
-  const el = document.body;
-  el.classList.add("over");
-  this.animation = "fadeOut"
-  setTimeout(() => next(), 600);
-}
-}
-
+    const el = document.body;
+    el.classList.add("over");
+    this.animation = "fadeOut";
+    setTimeout(() => next(), 600);
+  }
+};
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Baloo&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Baloo&display=swap");
 
 .over {
   overflow: hidden;
@@ -68,6 +86,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: white;
+  font-family: "Lexend Deca", sans-serif;
 
   /*position: relative;
   z-index: 5;*/
@@ -84,19 +103,39 @@ export default {
   font-family: baloo;
 }
 
+.settings {
+  display: flex;
+  bottom: -500px;
+}
+
+.setting {
+  display: flex;
+  margin: 0 5px 0 5px;
+}
+
+.setting div {
+  margin: 0 2px 0 2px;
+}
+
+.hr-y {
+  width: 1px;
+  height: 20px;
+  background-color: white;
+}
+
 .statut {
   width: fit-content;
   border: 1.5px solid white;
   border-radius: 30px;
   color: white;
-  font-family: 'Lexend Deca', sans-serif;
   padding: 2px 11px 2px 11px;
-  margin-top:10px;
+  margin-top: 10px;
   font-size: 1.2em;
 }
 
 @media screen and (max-width: 1170px) {
-  html, body {
+  html,
+  body {
     height: auto;
   }
 
@@ -111,7 +150,6 @@ export default {
   .middle {
     margin: 20px 0 20px 0;
   }
-
 }
 
 @keyframes move-twink-back {
@@ -156,7 +194,5 @@ export default {
   -webkit-animation: move-twink-back 200s linear infinite;
   animation: move-twink-back 200s linear infinite;
 }
-
-
 
 </style>
