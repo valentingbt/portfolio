@@ -1,7 +1,7 @@
 <template>
   <div class="card">
       <img class="dot" src="@/assets/dot.svg" alt="">
-    <div class="body">
+    <div :class="theme" class="body">
       <div class="card-header">
         <div class="date">{{ date }}</div>
         <div class="company">{{ company }}</div>
@@ -21,6 +21,11 @@ export default {
     company: String,
     city: String,
     description: String
+  },
+  data() {
+    return {
+      theme: localStorage.getItem('theme')
+    }
   }
 };
 </script>
@@ -37,12 +42,19 @@ export default {
 .body {
   width: 350px;
   border: 3px solid white;
-  border-radius: 42px;
   padding: 20px 20px 20px 20px;
 
 
   color: white;
   font-family: "Lexend Deca", sans-serif;
+}
+
+.body.fancy {
+  border-radius: 42px;
+}
+
+.body.light {
+  border-radius: 12px;
 }
 
 .dot {

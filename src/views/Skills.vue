@@ -1,5 +1,5 @@
 <template>
-  <div class="skills animated" :class="animation">
+  <div class="skills animated" :class="[animation, theme]">
     <div class="quit">
       <img @click="leavePage" class="cross" src="../assets/close.svg" alt />
     </div>
@@ -25,6 +25,7 @@
           title="Git"
           :icon="require('../assets/git.svg')"
           :color="'background:#00a6f3'"
+          :iconColor="'background:#f05033'"
         />
 
         <SocialButton
@@ -32,6 +33,7 @@
           title="SQL"
           :icon="require('../assets/sql.png')"
           :color="'background:#00a6f3'"
+          :iconColor="'background:#4a7fc6'"
         />
 
         <SocialButton
@@ -39,6 +41,7 @@
           title="NoSQL"
           :icon="require('../assets/mongo.png')"
           :color="'background:#00a6f3'"
+          :iconColor="'background:#191155'"
         />
       </div>
     </div>
@@ -60,7 +63,8 @@ export default {
   data() {
     return {
       skills: skillData,
-      animation: "slideInUp"
+      animation: "slideInUp",
+      theme: localStorage.getItem('theme')
     };
   },
   methods: {
@@ -78,9 +82,17 @@ export default {
 
 <style>
 .skills {
+  height: 100%;
+}
+
+.skills.fancy {
   background: #754cbd;
   border-radius: 30px 30px 0 0;
-  height: 100%;
+}
+
+.skills.light {
+  background: #00a6f3;
+  border-radius: 17px 17px 0 0;
 }
 
 .col {

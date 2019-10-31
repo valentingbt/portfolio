@@ -1,8 +1,8 @@
 <template>
-<div class="card" :style="color" >
-        <img :src="icon" alt="">
+<div :class="theme" class="card" :style="color" >
+        <img :class="theme" :style="iconColor" :src="icon" alt="">
 
-      <p>{{ title }}</p>
+      <p :class="theme" >{{ title }}</p>
 
 </div>
 </template>
@@ -13,7 +13,13 @@ export default {
   props: {
     title: String,
     icon: String,
-    color: String
+    color: String,
+    iconColor: String
+  },
+    data() {
+    return {
+      theme: localStorage.getItem('theme'),
+    }
   }
 }
 </script>
@@ -24,11 +30,19 @@ export default {
 .card {
     height: 40px;
     background: black;
-    border-radius: 46px;
     display: flex;
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.5s;
+    overflow: hidden;
+}
+
+.card.fancy {
+  border-radius: 46px;
+}
+
+.card.light {
+  border-radius: 12px;
 }
 
 .card:hover {
@@ -41,12 +55,29 @@ img {
   height: 40px;
 }
 
+img.fancy {
+  border-radius: 100px;
+}
+
+img.light {
+  border-radius: 12px;
+}
+
 p {
     font-family: 'Lexend Deca', sans-serif;
     font-size: 1.1em;
     color: white;
     margin:0 15px 0 15px;
 }
+
+p.fancy {
+  color: white;
+}
+
+p.light {
+  color: #e3f2fd;
+}
+
 
 @media screen and (max-width: 1170px) {
   .card {

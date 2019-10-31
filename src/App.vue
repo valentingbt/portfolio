@@ -1,21 +1,39 @@
 <template>
-  <div class="app">
-    <!--<div class="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/skills">Compétences</router-link>
-    </div> -->
+  <div :class="theme" class="app">
     <router-view class="view"/>
   <div class="sky"></div>
-  <div class="twinkling"></div>
-  <div class="stars"></div>
+  <div :class="theme" class="twinkling"></div>
+  <div :class="theme" class="stars"></div>
   </div>
 </template>
 
+<script>
+export default {
+  data(){
+    return {
+      theme: localStorage.getItem('theme')
+    }
+  },
+  beforeCreate(){
+    if (localStorage.getItem('theme') === null){
+      localStorage.setItem('theme', 'fancy');
+    }
+  }
+}
+</script>
+
 <style>
 html, body {
-    background: #191155;
     height: 100%;
     margin: 0;
+}
+
+.app.fancy {
+  background: #191155;
+}
+
+.app.light {
+  background: #e3f2fd;
 }
 
 p {
@@ -62,15 +80,31 @@ p {
 }
 
 .stars {
-  background: #191155 url(./assets/stars.png) repeat top center;
+  background: repeat top center;
   z-index: 1;
 }
 
+.stars.fancy {
+  background: url(./assets/stars.png);
+}
+
+.stars.light {
+  background: none;
+}
+
 .twinkling {
-  background: url(./assets/twinkling.png) repeat top center;
+  background: repeat top center;
   z-index: 2;
   -webkit-animation: move-twink-back 200s linear infinite;
   animation: move-twink-back 200s linear infinite;
+}
+
+.twinkling.fancy {
+  background: url(./assets/twinkling.png);
+}
+
+.twinkling.light {
+  background: none;
 }
 
 .app {

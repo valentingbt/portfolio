@@ -1,7 +1,8 @@
 <template>
-<div class="card">
-    <img :src="image" alt="">
-    <p>{{ title }}</p>
+<div :class="theme" class="card">
+    <img v-if="theme === 'fancy'" :src="image" alt="">
+    <img v-if="theme === 'light'" :src="image_light" alt="">
+    <p :class="theme" >{{ title }}</p>
 </div>
 </template>
 
@@ -10,7 +11,13 @@ export default {
   name: 'MenuButton',
   props: {
     title: String,
-    image: String
+    image: String,
+    image_light: String
+  },
+  data() {
+    return {
+      theme: localStorage.getItem('theme')
+    }
   }
 }
 </script>
@@ -21,9 +28,6 @@ export default {
 .card {
     width: 370px;
     height: 200px;
-    background-color: rgba(103, 58, 183, 0.9);
-    border-radius: 46px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 10px 0 10px 0;
 
     display: flex;
@@ -31,6 +35,18 @@ export default {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+}
+
+.card.fancy {
+    background-color: rgba(103, 58, 183, 0.9);
+    border-radius: 46px;
+    box-shadow: 0 4px 8px 0, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card.light {
+    background-color: rgba(0, 191, 243, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 191, 243, 0.9), 0 6px 20px 0 rgba(0, 191, 243, 0.19);
 }
 
 .card:hover {
@@ -41,8 +57,16 @@ export default {
 p {
     font-family: 'Lexend Deca', sans-serif;
     font-size: 2.2em;
-    color: white;
     margin: 10px 0 0 0;
+    color: black;
+}
+
+p.fancy {
+  color: white;
+}
+
+p.light {
+  color: #e3f2fd;
 }
 
 img {

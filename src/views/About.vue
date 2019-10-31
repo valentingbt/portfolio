@@ -1,10 +1,10 @@
 <template>
-  <div class="about animated" :class="animation">
+  <div class="about animated" :class="[animation, theme]">
     <div class="quit">
       <img @click="leavePage" class="cross" src="../assets/close.svg" alt />
     </div>
     <div class="title">INFOS</div>
-    <img class="profil_pic animated fadeInDown" src="@/assets/photo.svg" alt />
+    <img :class="theme" class="profil_pic animated fadeInDown" src="@/assets/photo.svg" alt />
     <div class="prez animated fadeInUp border">
       <p class="prez-text">
         <span class="hello">Bonjour ! <br></span>
@@ -16,11 +16,12 @@
         <br />Je suis actuellement à la recherche d'une alternance !
       </p>
     </div>
-      <img class="logo animated fadeInDown" src="@/assets/logo.png" alt="">
+      <img :class="theme" class="logo animated fadeInDown" src="@/assets/logo.png" alt="">
     <div class="contact animated fadeInUp border">
 
       <p>Ce site est encore en construction mais il s'améliore de jours en jours. Toutes les données ne sont <strong>pas</strong> codées en dur mais sont bien stockées dans des objets JSON de manière à être facilement éditables. Créé avec le ❤️ grâce au super framewok VueJS.</p>
     </div>
+
   </div>
 </template>
 
@@ -31,7 +32,8 @@ export default {
   name: "about",
   data() {
     return {
-      animation: "slideInUp"
+      animation: "slideInUp",
+      theme: localStorage.getItem('theme')
     };
   },
   methods: {
@@ -49,15 +51,22 @@ export default {
 
 <style>
 .about {
+  padding: 0 30px 0 30px;
+  height: 100%;
+}
+
+.about.fancy {
   background: #754cbd;
   border-radius: 30px 30px 0 0;
-  height: 100%;
-  padding: 0 30px 0 30px;
+}
+
+.about.light {
+  background: #00a6f3;
+  border-radius: 17px 17px 0 0;
 }
 
 .profil_pic {
   position: relative;
-  background-color: #754cbd;
   padding: 10px;
   width: 150px;
   bottom: -90px;
@@ -91,11 +100,18 @@ export default {
 .logo {
   width: 80px;
   position: relative;
-  background-color: #754cbd;
   padding: 10px;
   bottom: -50px;
   margin-left: 60px;
   z-index: 1;
+}
+
+img.fancy {
+  background-color: #754cbd;
+}
+
+img.light {
+  background-color: #00a6f3;
 }
 
 .contact {

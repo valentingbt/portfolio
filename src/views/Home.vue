@@ -1,24 +1,25 @@
 <template>
   <div class="home animated fast" :class="animation">
-    <div class="profil">
+    <div :class="theme" class="profil">
 
       <div class="settings">
         <div class="setting">
-          <div>dark</div>
-          <div>light</div>
-          <div>fancy</div>
+          <!--<div @click="changeTheme('dark')">dark</div>-->
+          <div :class="{ active: theme === 'light' }" @click="changeTheme('light')">light</div>
+          <div :class="{ active: theme === 'fancy' }" @click="changeTheme('fancy')">fancy</div>
         </div>
-        <div class="hr-y"></div>
+        <!--<div :class="theme" class="hr-y"></div>
         <div class="setting">
           <div>français</div>
           <div>english</div>
-        </div>
+        </div> -->
       </div>
 
-      <img class="name" src="@/assets/name.svg" alt />
+      <img v-if="theme === 'fancy'" class="name" src="@/assets/name.svg" alt />
+      <img v-if="theme === 'light'" class="name-light" src="@/assets/name_light.svg" alt />
 
 
-      <div :class="bounce" class="statut" @click="changeStatut">{{statut[i]}}</div>
+      <div :class="[bounce,theme]" class="statut" @click="changeStatut">{{statut[i]}}</div>
     </div>
     <SocialRow class="middle" />
     <MenuRow />
@@ -46,7 +47,8 @@ export default {
         "voyageur dans l'âme",
         "chocolat addict"
       ],
-      i: 0
+      i: 0,
+      theme: localStorage.getItem('theme')
     };
   },
   methods: {
@@ -58,6 +60,10 @@ export default {
       } else {
         this.i = 0;
       }
+    },
+    changeTheme(color){
+      localStorage.setItem('theme',color);
+      location.reload();
     }
   },
   beforeRouteLeave(to, from, next) {
@@ -87,20 +93,31 @@ export default {
   text-align: center;
   color: white;
   font-family: "Lexend Deca", sans-serif;
-
-  /*position: relative;
-  z-index: 5;*/
 }
 
 .profil {
   display: flex;
   align-items: center;
   flex-direction: column;
+  background:none;
+}
+
+.profil.fancy {
+  color:white;
+}
+
+.profil.light {
+  color:#00a6f3;
 }
 
 .name {
   width: 1100px;
-  font-family: baloo;
+}
+
+.name-light {
+  width: 900px;
+  -webkit-filter: drop-shadow(5px 5px 5px #00a6f3);
+  filter: drop-shadow(0 0 3px #00a6f3);
 }
 
 .settings {
@@ -115,22 +132,50 @@ export default {
 
 .setting div {
   margin: 0 2px 0 2px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.setting div:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.active:hover {
+  cursor: text;
 }
 
 .hr-y {
   width: 1px;
   height: 20px;
+}
+
+.hr-y.fancy {
   background-color: white;
+}
+
+.hr-y.light {
+  background-color: #00a6f3;
 }
 
 .statut {
   width: fit-content;
-  border: 1.5px solid white;
-  border-radius: 30px;
-  color: white;
+  border: 1.5px solid;
   padding: 2px 11px 2px 11px;
   margin-top: 10px;
   font-size: 1.2em;
+}
+
+.statut.fancy {
+  border-radius: 30px;
+}
+
+.statut.light {
+  border-radius: 12px;
 }
 
 @media screen and (max-width: 1170px) {
@@ -143,56 +188,13 @@ export default {
     display: block;
   }
 
-  .name {
+  .name, .name-light {
     width: 100%;
   }
 
   .middle {
     margin: 20px 0 20px 0;
   }
-}
-
-@keyframes move-twink-back {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -10000px 5000px;
-  }
-}
-
-@-webkit-keyframes move-twink-back {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -10000px 5000px;
-  }
-}
-
-.stars,
-.twinkling,
-.sky {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.stars {
-  background: #191155 url(../assets/stars.png) repeat top center;
-  z-index: 1;
-}
-
-.twinkling {
-  background: url(../assets/twinkling.png) repeat top center;
-  z-index: 2;
-  -webkit-animation: move-twink-back 200s linear infinite;
-  animation: move-twink-back 200s linear infinite;
 }
 
 </style>

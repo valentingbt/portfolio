@@ -1,5 +1,5 @@
 <template>
-  <div class="experiences animated" :class="animation2">
+  <div class="experiences animated" :class="[animation2,theme]">
     <div class="quit">
       <img @click="leavePage" class="cross" src="../assets/close.svg" alt />
     </div>
@@ -60,7 +60,8 @@ export default {
       companies: expData.companies,
       schools: expData.schools,
       diplomas: expData.diplomas,
-      animation2: "slideInUp"
+      animation2: "slideInUp",
+      theme: localStorage.getItem('theme')
     };
   },
   methods: {
@@ -77,9 +78,15 @@ export default {
 </script>
 
 <style>
-.experiences {
+
+.experiences.fancy {
   background: #754cbd;
   border-radius: 30px 30px 0 0;
+}
+
+.experiences.light {
+  background: #00a6f3;
+  border-radius: 17px 17px 0 0;
 }
 
 .col {

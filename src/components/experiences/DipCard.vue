@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <div class="body">
+    <div class="body" :class="theme">
       <div class="diploma">{{ diploma }}</div>
       <div class="option">{{ option }}</div>
 
@@ -18,6 +18,11 @@ export default {
     diploma: String,
     option: String,
     description: String
+  },
+  data() {
+    return {
+    theme: localStorage.getItem('theme')
+    }
   }
 };
 </script>
@@ -39,8 +44,15 @@ export default {
   width: 400px;
   padding: 20px 20px 20px 20px;
   text-align: center;
-  border-radius: 42px;
   border: 3px solid white;
+}
+
+.body.fancy {
+  border-radius: 42px;
+}
+
+.body.light {
+  border-radius: 12px;
 }
 
 hr {

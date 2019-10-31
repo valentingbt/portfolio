@@ -5,6 +5,7 @@
         @click.native="leavePage"
         title="COMPETENCES"
         :image="require('../../assets/skill.svg')"
+        :image_light="require('../../assets/skill_light.svg')"
       />
     </router-link>
 
@@ -13,11 +14,16 @@
         class="middle"
         title="EXPERIENCES"
         :image="require('../../assets/experience.svg')"
+        :image_light="require('../../assets/experience_light.svg')"
       />
     </router-link>
 
     <router-link to="/about">
-      <MenuButton title="INFOS" :image="require('../../assets/information.svg')" />
+      <MenuButton 
+      title="INFOS" 
+      :image="require('../../assets/information.svg')"
+      :image_light="require('../../assets/information_light.svg')"
+       />
     </router-link>
   </div>
 </template>

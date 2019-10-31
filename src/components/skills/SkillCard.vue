@@ -1,7 +1,7 @@
 <template>
-  <div class="card">
+  <div class="card" :class="theme">
       <div class="top">
-            <div class="title">
+            <div :class="theme" class="title">
                  {{ title }}
             </div>
       </div>
@@ -24,6 +24,11 @@ components: {
 props : {
     title: String,
     items: Object
+},
+data() {
+    return {
+        theme: localStorage.getItem('theme')
+    }
 }
 }
 </script>
@@ -33,9 +38,16 @@ props : {
 
 .card {
     border: 3px solid white;
-    border-radius: 42px;
     padding: 0px 28px 30px 28px;
     margin: 50px 10px 10px 10px;
+}
+
+.card.fancy {
+    border-radius: 42px;
+}
+
+.card.light {
+    border-radius: 12px;
 }
 
 .top {
@@ -48,7 +60,6 @@ props : {
 }
 .title {
     top: -20px;
-    background-color: #754cbd;
     position: relative;
 
     color: white;
@@ -56,5 +67,13 @@ props : {
     font-size: 2em;
     text-align: center;
     padding: 0 15px 0 15px;
+}
+
+.title.fancy {
+    background-color: #754cbd;
+}
+
+.title.light {
+    background-color: #00a6f3;
 }
 </style>

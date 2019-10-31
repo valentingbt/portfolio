@@ -6,7 +6,8 @@
           <SocialButton 
           title="@VGuibert" 
           :icon="require('../../assets/twitter.svg')" 
-          :color="'background:#6dcff6'"/>
+          :color="'background:#6dcff6'"
+          :iconColor="'background:#00aced;'"/>
       </a>
 
       <a href="mailto:valentin.guibert@ynov.com">
@@ -14,7 +15,8 @@
             class="middle" 
             title="valentinguibert@ynov.com" 
             :icon="require('../../assets/email.svg')" 
-            :color="'background:#6dbef6'"/>
+            :color="'background:#6dbef6'"
+            :iconColor="'background:#2196F3;'"/>
       </a>
 
 
@@ -22,7 +24,8 @@
         <SocialButton 
           title="valentingbt" 
           :icon="require('../../assets/github.svg')"
-          :color="'background:#00a6f3'"/>
+          :color="'background:#00a6f3'"
+          :iconColor="'background:#1E88E5;'"/>
       </a>
     </div>
 

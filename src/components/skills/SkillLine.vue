@@ -3,7 +3,7 @@
       <p>{{ skillName }}</p>
         <fa-rating 
             :glyph="fa_circle"
-            inactive-color="#754cbd"
+            :inactive-color="in_color"
             active-color="#ffffff"
             :rating="rating"
             read-only
@@ -32,10 +32,18 @@ components:{
   created(){
     // register the icon
     this.fa_circle = fa_circle
+    if (this.theme === 'fancy') {
+      this.in_color = "#754cbd"
+    }
+    if (this.theme === 'light'){
+      this.in_color = "#00a6f3"
+    }
   },
   data(){
     return{
-      fa_circle: '' // declare the icon
+      fa_circle: '', // declare the icon
+      theme: localStorage.getItem('theme'),
+      in_color: "#754cbd"
     } 
   } 
 }
