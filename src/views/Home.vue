@@ -57,7 +57,8 @@ export default {
       }
     },
     changeLocale(locale) {
-      this.$i18n.locale = locale;
+      localStorage.setItem("lang", locale);
+      location.reload();
     },
     changeTheme(color) {
       localStorage.setItem("theme", color);

@@ -1,31 +1,38 @@
 <template>
   <div :class="theme" class="app">
-    <router-view class="view"/>
-  <div class="sky"></div>
-  <div :class="theme" class="twinkling"></div>
-  <div :class="theme" class="stars"></div>
+    <router-view class="view" />
+    <div class="sky"></div>
+    <div :class="theme" class="twinkling"></div>
+    <div :class="theme" class="stars"></div>
   </div>
 </template>
 
 <script>
 export default {
-  data(){
+  data() {
     return {
-      theme: localStorage.getItem('theme')
-    }
+      theme: localStorage.getItem("theme")
+    };
   },
-  beforeCreate(){
-    if (localStorage.getItem('theme') === null){
-      localStorage.setItem('theme', 'fancy');
+  beforeCreate() {
+    if (localStorage.getItem("theme") === null) {
+      localStorage.setItem("theme", "fancy");
     }
+
+    if (localStorage.getItem("lang") === null) {
+      localStorage.setItem("lang", "en");
+    }
+
+    this.$i18n.locale = localStorage.getItem("lang")
   }
-}
+};
 </script>
 
 <style>
-html, body {
-    height: 100%;
-    margin: 0;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
 .app.fancy {
@@ -46,7 +53,6 @@ p {
   position: relative;
   z-index: 5;
 }
-
 
 @keyframes move-twink-back {
   from {
@@ -131,10 +137,10 @@ a {
 
 /* Title and quit */
 .title {
-    color: white;
-    font-family: 'Lexend Deca', sans-serif;
-    font-size: 2em;
-    text-align: center;
+  color: white;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 2em;
+  text-align: center;
 }
 
 .quit {
@@ -163,7 +169,7 @@ a {
 ::-webkit-scrollbar-track {
   background: #754cbd;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
@@ -171,7 +177,7 @@ a {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
 
 /* Mobile */
@@ -181,5 +187,4 @@ a {
     flex-wrap: wrap;
   }
 }
-
 </style>
