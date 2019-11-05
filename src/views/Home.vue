@@ -154,7 +154,7 @@ export default {
 }
 
 .active:hover {
-  cursor: text;
+  cursor: default;
 }
 
 .hr-y {
