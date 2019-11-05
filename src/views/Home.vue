@@ -48,8 +48,7 @@ export default {
       bounce: "",
       statut: home.statut,
       i: 0,
-      theme: localStorage.getItem("theme"),
-      langs: ["en", "fr"]
+      theme: localStorage.getItem("theme")
     };
   },
   methods: {
@@ -63,12 +62,16 @@ export default {
       }
     },
     changeLocale(locale) {
-      localStorage.setItem("lang", locale);
-      location.reload();
+      if (this.$i18n.locale != locale) {
+        localStorage.setItem("lang", locale);
+        location.reload();
+      }
     },
     changeTheme(color) {
-      localStorage.setItem("theme", color);
-      location.reload();
+      if (this.theme != color) {
+        localStorage.setItem("theme", color);
+        location.reload();
+      }
     }
   },
   beforeRouteLeave(to, from, next) {
