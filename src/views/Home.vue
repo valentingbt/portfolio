@@ -4,20 +4,26 @@
       <div class="settings">
         <div class="setting">
           <!--<div @click="changeTheme('dark')">dark</div>-->
-          <div :class="{ active: theme === 'light' }" @click="changeTheme('light')">{{ $t("home.light") }}</div>
-          <div :class="{ active: theme === 'fancy' }" @click="changeTheme('fancy')">{{ $t("home.fancy") }}</div>
+          <div
+            :class="{ active: theme === 'light' }"
+            @click="changeTheme('light')"
+          >{{ $t("home.light") }}</div>
+          <div
+            :class="{ active: theme === 'fancy' }"
+            @click="changeTheme('fancy')"
+          >{{ $t("home.fancy") }}</div>
         </div>
         <div :class="theme" class="hr-y"></div>
         <div class="setting locale-changer">
-          <div :class="{ active: $i18n.locale === 'fr' }" @click="changeLocale('fr')" >français</div>
-          <div :class="{ active: $i18n.locale === 'en' }" @click="changeLocale('en')" >english</div>
+          <div :class="{ active: $i18n.locale === 'fr' }" @click="changeLocale('fr')">français</div>
+          <div :class="{ active: $i18n.locale === 'en' }" @click="changeLocale('en')">english</div>
         </div>
       </div>
 
       <img v-if="theme === 'fancy'" class="name" src="@/assets/name.svg" alt />
       <img v-if="theme === 'light'" class="name-light" src="@/assets/name_light.svg" alt />
 
-       <div :class="[bounce,theme]" class="statut" @click="changeStatut">{{ $t("home.statut")[i] }}</div>
+      <div :class="[bounce,theme]" class="statut" @click="changeStatut">{{ $t("home.statut")[i] }}</div>
     </div>
     <SocialRow class="middle" />
     <MenuRow />
@@ -28,7 +34,7 @@
 // @ is an alias to /src
 import MenuRow from "@/components/menu/MenulRow";
 import SocialRow from "@/components/social/SocialRow";
-import { home } from "../locales/fr.json"
+import { home } from "../locales/fr.json";
 
 export default {
   name: "home",
@@ -40,15 +46,15 @@ export default {
     return {
       animation: "fadeIn",
       bounce: "",
-      statut : home.statut,
+      statut: home.statut,
       i: 0,
       theme: localStorage.getItem("theme"),
-      langs: ['en', 'fr']
+      langs: ["en", "fr"]
     };
   },
   methods: {
     changeStatut() {
-      this.bounce = "animated bounceIn faster";
+      this.bounce = "animated swing faster";
       setTimeout(() => (this.bounce = ""), 500);
       if (this.i <= this.statut.length - 2) {
         this.i = this.i + 1;
@@ -167,6 +173,7 @@ export default {
   padding: 2px 11px 2px 11px;
   margin-top: 10px;
   font-size: 1.2em;
+  transition: 2s;
 }
 
 .statut.fancy {
