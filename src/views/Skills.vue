@@ -3,7 +3,7 @@
     <div class="quit">
       <img @click="leavePage" class="cross" src="../assets/close.svg" alt />
     </div>
-    <div class="title">COMPETENCES</div>
+    <div class="title">{{ $t("home.skills") }}</div>
     <div class="columns animated fadeInUp">
       <div class="col">
         <SkillCard title="Office" :items="skills.office" />
@@ -13,12 +13,12 @@
         <SkillCard class="middle-col" title="Web" :items="skills.web" />
       </div>
       <div class="col">
-        <SkillCard title="Software" :items="skills.software" />
-        <SkillCard title="Langues" :items="skills.language" />
+        <SkillCard :title="$i18n.t('skills.software')" :items="skills.software" />
+        <SkillCard :title="$i18n.t('skills.languages')" :items="$i18n.t('skills.language')" />
       </div>
     </div>
     <div class="other animated fadeInUp">
-      <p class="other-title">Autres compétences</p>
+      <p class="other-title">{{ $t("skills.other") }}</p>
       <div class="other-buttons">
         <SocialButton
           class="button"

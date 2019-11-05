@@ -5,7 +5,7 @@
     </div>
     <div class="columns animated fadeInUp">
       <div class="col">
-        <div class="title">Etudes</div>
+        <div class="title">{{ $t("experiences.studies") }}</div>
         <div v-for="school in schools" v-bind:key="school">
           <exp-card
             :date="school.date"
@@ -17,7 +17,7 @@
       </div>
 
       <div class="col">
-        <div class="title">Experience</div>
+        <div class="title">{{ $t("experiences.experience") }}</div>
         <div v-for="company in companies" v-bind:key="company">
           <exp-card
             :date="company.date"
@@ -29,7 +29,7 @@
       </div>
 
       <div class="col">
-        <div class="title">Diplomes</div>
+        <div class="title">{{ $t("experiences.qualifications") }}</div>
         <div v-for="diploma in diplomas" v-bind:key="diploma">
           <dip-card
             :diploma="diploma.diploma"
@@ -46,7 +46,6 @@
 import ExpCard from "../components/experiences/ExpCard";
 import DipCard from "../components/experiences/DipCard";
 
-import expData from "../assets/data/experiences.json"; // import data from json
 import router from "../router";
 
 export default {
@@ -57,9 +56,9 @@ export default {
   },
   data() {
     return {
-      companies: expData.companies,
-      schools: expData.schools,
-      diplomas: expData.diplomas,
+      companies: this.$i18n.t('experiences.companies'),
+      schools: this.$i18n.t('experiences.schools'),
+      diplomas: this.$i18n.t('experiences.diplomas'),
       animation2: "slideInUp",
       theme: localStorage.getItem('theme')
     };

@@ -3,7 +3,7 @@
     <router-link to="/skills">
       <MenuButton
         @click.native="leavePage"
-        title="COMPETENCES"
+        :title="$i18n.t('home.skills')"
         :image="require('../../assets/skill.svg')"
         :image_light="require('../../assets/skill_light.svg')"
       />
@@ -12,7 +12,7 @@
     <router-link to="/experiences">
       <MenuButton
         class="middle"
-        title="EXPERIENCES"
+        :title="$i18n.t('home.experience')"
         :image="require('../../assets/experience.svg')"
         :image_light="require('../../assets/experience_light.svg')"
       />
@@ -20,7 +20,7 @@
 
     <router-link to="/about">
       <MenuButton 
-      title="INFOS" 
+      :title="$i18n.t('home.about')"
       :image="require('../../assets/information.svg')"
       :image_light="require('../../assets/information_light.svg')"
        />

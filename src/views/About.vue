@@ -7,19 +7,16 @@
     <img :class="theme" class="profil_pic animated fadeInDown" src="@/assets/photo.svg" alt />
     <div class="prez animated fadeInUp border">
       <p class="prez-text">
-        <span class="hello">Bonjour ! <br></span>
-        <span class="i-am">Je suis Valentin Guibert,</span>
-        j’ai 21 ans et je suis étudiant en troisième année
-        en école d’ingénierie informatique à Nantes pour devenir développeur
-        full-stack. Je suis passionné par les nouvelles technologies
-        et le numérique depuis mon enfance.
-        <br />Je suis actuellement à la recherche d'une alternance !
+        <span class="hello">{{ $t('about.hello') }}<br></span>
+        <span class="i-am">{{ $t("about.i-am") }}</span>
+        {{ $t("about.prez") }}
+        
       </p>
     </div>
       <img :class="theme" class="logo animated fadeInDown" src="@/assets/logo.png" alt="">
     <div class="contact animated fadeInUp border">
 
-      <p>Ce site est encore en construction mais il s'améliore de jours en jours. Toutes les données ne sont <strong>pas</strong> codées en dur mais sont bien stockées dans des objets JSON de manière à être facilement éditables. Créé avec le ❤️ grâce au super framewok VueJS.</p>
+      <p>{{ $t("about.app-info") }}</p>
     </div>
 
   </div>

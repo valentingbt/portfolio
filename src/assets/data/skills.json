@@ -75,20 +75,5 @@
         "rating":2
     }
 
-],
-"language": [
-    { 
-        "name":"Français",
-        "rating":5
-    },
-    {
-        "name":"Anglais",
-        "rating":4
-    },
-    {
-        "name":"Espagnol",
-        "rating":3
-    }
-
 ]
 }

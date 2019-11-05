@@ -1,25 +1,23 @@
 <template>
   <div class="home animated fast" :class="animation">
     <div :class="theme" class="profil">
-
       <div class="settings">
         <div class="setting">
           <!--<div @click="changeTheme('dark')">dark</div>-->
-          <div :class="{ active: theme === 'light' }" @click="changeTheme('light')">light</div>
-          <div :class="{ active: theme === 'fancy' }" @click="changeTheme('fancy')">fancy</div>
+          <div :class="{ active: theme === 'light' }" @click="changeTheme('light')">{{ $t("home.light") }}</div>
+          <div :class="{ active: theme === 'fancy' }" @click="changeTheme('fancy')">{{ $t("home.fancy") }}</div>
         </div>
-        <!--<div :class="theme" class="hr-y"></div>
-        <div class="setting">
-          <div>français</div>
-          <div>english</div>
-        </div> -->
+        <div :class="theme" class="hr-y"></div>
+        <div class="setting locale-changer">
+          <div :class="{ active: $i18n.locale === 'fr' }" @click="changeLocale('fr')" >français</div>
+          <div :class="{ active: $i18n.locale === 'en' }" @click="changeLocale('en')" >english</div>
+        </div>
       </div>
 
       <img v-if="theme === 'fancy'" class="name" src="@/assets/name.svg" alt />
       <img v-if="theme === 'light'" class="name-light" src="@/assets/name_light.svg" alt />
 
-
-      <div :class="[bounce,theme]" class="statut" @click="changeStatut">{{statut[i]}}</div>
+       <div :class="[bounce,theme]" class="statut" @click="changeStatut">{{ $t("home.statut")[i] }}</div>
     </div>
     <SocialRow class="middle" />
     <MenuRow />
@@ -30,6 +28,7 @@
 // @ is an alias to /src
 import MenuRow from "@/components/menu/MenulRow";
 import SocialRow from "@/components/social/SocialRow";
+import { home } from "../locales/fr.json"
 
 export default {
   name: "home",
@@ -41,14 +40,10 @@ export default {
     return {
       animation: "fadeIn",
       bounce: "",
-      statut: [
-        "étudiant en développement web",
-        "binge-watcher sur Netflix",
-        "voyageur dans l'âme",
-        "chocolat addict"
-      ],
+      statut : home.statut,
       i: 0,
-      theme: localStorage.getItem('theme')
+      theme: localStorage.getItem("theme"),
+      langs: ['en', 'fr']
     };
   },
   methods: {
@@ -61,8 +56,11 @@ export default {
         this.i = 0;
       }
     },
-    changeTheme(color){
-      localStorage.setItem('theme',color);
+    changeLocale(locale) {
+      this.$i18n.locale = locale;
+    },
+    changeTheme(color) {
+      localStorage.setItem("theme", color);
       location.reload();
     }
   },
@@ -99,15 +97,15 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background:none;
+  background: none;
 }
 
 .profil.fancy {
-  color:white;
+  color: white;
 }
 
 .profil.light {
-  color:#00a6f3;
+  color: #00a6f3;
 }
 
 .name {
@@ -188,7 +186,8 @@ export default {
     display: block;
   }
 
-  .name, .name-light {
+  .name,
+  .name-light {
     width: 100%;
   }
 
@@ -196,5 +195,4 @@ export default {
     margin: 20px 0 20px 0;
   }
 }
-
 </style>

@@ -1,0 +1,121 @@
+{
+  "home": {
+    "statut": [
+      "web developer student",
+      "netflix binge-watcher",
+      "travel lover",
+      "chocolat addict"
+    ],
+    "skills": "SKILLS",
+    "experience": "EXPERIENCE",
+    "about": "ABOUT",
+    "fancy": "fancy",
+    "light": "light"
+  },
+  "skills": {
+    "other": "Other skills",
+    "software": "Software",
+    "languages": "Languages",
+    "language": [
+      {
+        "name": "French",
+        "rating": 5
+      },
+      {
+        "name": "English",
+        "rating": 4
+      },
+      {
+        "name": "Spanish",
+        "rating": 3
+      }
+    ]
+  },
+  "experiences": {
+    "studies": "Studies",
+    "experience": "Experience",
+    "qualifications": "Qualifications",
+    "companies": [
+      {
+        "date": "JUNE 2019 > JULY 2019",
+        "company": "Lukyna",
+        "city": "Drefféac",
+        "description": "One-month internship as web developer on the Lukyna company’s e-commerce website. Ergonomy, responsive and SEO improvements."
+      },
+      {
+        "date": "MAY 2018 > TODAY",
+        "company": "La Cabane à Burger",
+        "city": "Pontchâteau",
+        "description": "Permanent contract in the making and selling of home-made burgers every weekends."
+      },
+      {
+        "date": "MAY 2018 > AUGUST 2018",
+        "company": "Ippon Technologies",
+        "city": "Nantes",
+        "description": "Two-month internship as web developer with AngularJS and Ionic in order to create a cross-platform mobile game."
+      },
+      {
+        "date": "JULY 2016 > SEPT 2017",
+        "company": "L'Air Marin",
+        "city": "La-Plaine-sur-Mer",
+        "description": "Two summers, and every weekends of the year in a restaurant. Indoor and terrace service, and dish cleaning."
+      },
+      {
+        "date": "SEPT 2016 > JAN 2019",
+        "company": "MPC",
+        "city": "Drefféac",
+        "description": "Creation of the micro-enterprise MPC. Computer advising and troubleshooting at home."
+      },
+      {
+        "date": "APRIL 2014",
+        "company": "City Hall",
+        "city": "Rifle, USA",
+        "description": "A month in the USA during which I worked for Rifle Colorado’s City Hall. Website and TV Chanel administration, file management, electronic device set up."
+      },
+      {
+        "date": "SUMMER 2014 / SUMMER 2015",
+        "company": "Société Areno",
+        "city": "Pontchâteau",
+        "description": "Two-week internship in house renovation and construction."
+      },
+      {
+        "date": "OCT 2012",
+        "company": "DRM Computer",
+        "city": "Pontchâteau",
+        "description": "A week of internship doing computer fixing, troubleshooting and unmounting."
+      }
+    ],
+    "schools": [
+      {
+        "date": "2017 > TODAY",
+        "company": "Ynov Campus",
+        "city": "Nantes",
+        "description": "Five-year studies in an engineering school specialised in computer sciences."
+      },
+      {
+        "date": "2014 > 2017",
+        "company": "Marcel Callo High School",
+        "city": "Redon",
+        "description": "Scientific High School, specialised in engineering, computer and electronic sciences."
+      }
+    ],
+    "diplomas": [
+      {
+        "diploma": "Scientific Baccalauréat",
+        "option": "Engineering Sciences Option",
+        "description": "Similar to A-Level (UK) or High School Diploma (US). Acquired with AB and European mentions."
+      },
+      {
+        "diploma": "Cambridge English Certiﬁcate (CEC)",
+        "option": "",
+        "description": "B1 level confirmation in english."
+      }
+    ]
+  },
+  "about": {
+    "hello": "Hello !",
+    "i-am": "My name is Valentin Guibert,",
+    "prez": "I am 21 and I am a third-year student in a computer engineering school to become a full-stack developer. I am passionate by new technologies and numeric since my childhood.",
+    "app-info": "This website is still not finished yet. Every data are not hard-coded, they are stocked in JSON objects in order to edit them easyly. Made with ❤️ thanks to the awesome VueJS framework."
+  }
+}
