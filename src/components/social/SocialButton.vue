@@ -1,5 +1,5 @@
 <template>
-<div :class="theme" class="card" :style="color" >
+<div :class="theme" class="card shine" :style="color" >
         <img :class="theme" :style="iconColor" :src="icon" alt="">
 
       <p :class="theme" >{{ title }}</p>

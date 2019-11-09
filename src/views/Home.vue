@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <img v-if="theme === 'fancy'" class="name" src="@/assets/name.svg" alt />
+      <img v-if="theme === 'fancy'" class="name shine" src="@/assets/name.svg" alt />
       <img v-if="theme === 'light'" class="name-light" src="@/assets/name_light.svg" alt />
 
       <div :class="[bounce,theme]" class="statut" @click="changeStatut">{{ $t("home.statut")[i] }}</div>
@@ -185,6 +185,28 @@ export default {
 
 .statut.light {
   border-radius: 12px;
+}
+
+.shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+
+.shine:hover::after {
+  width: 120%;
+  background-color: rgba(255, 255, 255, 0);
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 @media screen and (max-width: 1170px) {
