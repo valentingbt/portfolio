@@ -40,19 +40,19 @@
         "date": "JUNE 2019 > JULY 2019",
         "company": "Lukyna",
         "city": "Drefféac",
-        "description": "One-month internship as web developer on the Lukyna company’s e-commerce website. Ergonomy, responsive and SEO improvements."
+        "description": "One-month internship as a web developer on the Lukyna’s e-commerce website. Ergonomy, responsive and SEO improvements."
       },
       {
         "date": "MAY 2018 > TODAY",
         "company": "La Cabane à Burger",
         "city": "Pontchâteau",
-        "description": "Permanent contract in the making and selling of home-made burgers every weekends."
+        "description": "Permanent contract in the making and sale of home-made burgers every weekends."
       },
       {
         "date": "MAY 2018 > AUGUST 2018",
         "company": "Ippon Technologies",
         "city": "Nantes",
-        "description": "Two months internship as web developer with AngularJS and Ionic in order to create a cross-platform mobile game."
+        "description": "Two-month internship as a web developer using AngularJS and Ionic to create a cross-platform mobile game."
       },
       {
         "date": "JULY 2016 > SEPT 2017",
@@ -76,7 +76,7 @@
         "date": "SUMMER 2014 / SUMMER 2015",
         "company": "Société Areno",
         "city": "Pontchâteau",
-        "description": "Two weeks internship in house renovation and construction."
+        "description": "Two-week internship in house renovation and construction."
       },
       {
         "date": "OCT 2012",
@@ -90,7 +90,7 @@
         "date": "2017 > TODAY",
         "company": "Ynov Campus",
         "city": "Nantes",
-        "description": "Five years studies in an engineering school specialised in computer sciences."
+        "description": "Five years of studies in an engineering school specialised in computer sciences."
       },
       {
         "date": "2014 > 2017",
@@ -101,7 +101,7 @@
     ],
     "diplomas": [
       {
-        "diploma": "Scientific Baccalauréat",
+        "diploma": "French Scientific Baccalauréat",
         "option": "Engineering Sciences Option",
         "description": "Similar to A-Level (UK) or High School Diploma (US). Acquired with AB and European mentions."
       },
