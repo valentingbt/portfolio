@@ -15,6 +15,7 @@
               :company="school.company"
               :city="school.city"
               :description="school.description"
+              :image="school.image"
             />
           </div>
         </div>
@@ -26,6 +27,7 @@
               :diploma="diploma.diploma"
               :option="diploma.option"
               :description="diploma.description"
+              :image="diploma.image"
             />
           </div>
         </div>
@@ -40,6 +42,7 @@
               :company="company.company"
               :city="company.city"
               :description="company.description"
+              :image="company.image"
             />
           </div>
         </div>

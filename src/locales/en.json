@@ -40,49 +40,57 @@
         "date": "JUNE 2019 > JULY 2019",
         "company": "Lukyna",
         "city": "Drefféac",
-        "description": "One-month internship as a web developer on the Lukyna’s e-commerce website. Ergonomy, responsive and SEO improvements."
+        "description": "One-month internship as a web developer on the Lukyna’s e-commerce website. Ergonomy, responsive and SEO improvements.",
+        "image": "https://image.flaticon.com/icons/svg/1162/1162499.svg"
       },
       {
         "date": "MAY 2018 > TODAY",
         "company": "La Cabane à Burger",
         "city": "Pontchâteau",
-        "description": "Permanent contract in the making and sale of home-made burgers every weekends."
+        "description": "Permanent contract in the making and sale of home-made burgers every weekends.",
+        "image": "https://image.flaticon.com/icons/svg/878/878052.svg"
       },
       {
         "date": "MAY 2018 > AUGUST 2018",
         "company": "Ippon Technologies",
         "city": "Nantes",
-        "description": "Two-month internship as a web developer using AngularJS and Ionic to create a cross-platform mobile game."
+        "description": "Two-month internship as a web developer using AngularJS and Ionic to create a cross-platform mobile game.",
+        "image": "https://image.flaticon.com/icons/svg/958/958826.svg"
       },
       {
         "date": "JULY 2016 > SEPT 2017",
         "company": "L'Air Marin",
         "city": "La-Plaine-sur-Mer",
-        "description": "Two summers, and every weekends of the year in a restaurant. Indoor and terrace service, and dish cleaning."
+        "description": "Two summers, and every weekends of the year in a restaurant. Indoor and terrace service, and dish cleaning.",
+        "image": "https://image.flaticon.com/icons/svg/1046/1046806.svg"
       },
       {
         "date": "SEPT 2016 > JAN 2019",
         "company": "MPC",
         "city": "Drefféac",
-        "description": "Creation of the micro-enterprise MPC. Computer advising and troubleshooting at home."
+        "description": "Creation of the micro-enterprise MPC. Computer advising and troubleshooting at home.",
+        "image": "https://image.flaticon.com/icons/svg/868/868784.svg"
       },
       {
         "date": "APRIL 2014",
         "company": "City Hall",
         "city": "Rifle, USA",
-        "description": "A month in the USA during which I worked for Rifle Colorado’s City Hall. Website and TV Chanel administration, file management, electronic device set up."
+        "description": "A month in the USA during which I worked for Rifle Colorado’s City Hall. Website and TV Chanel administration, file management, electronic device set up.",
+        "image": "https://image.flaticon.com/icons/svg/1170/1170586.svg"
       },
       {
         "date": "SUMMER 2014 / SUMMER 2015",
         "company": "Société Areno",
         "city": "Pontchâteau",
-        "description": "Two-week internship in house renovation and construction."
+        "description": "Two-week internship in house renovation and construction.",
+        "image": "https://image.flaticon.com/icons/svg/681/681560.svg"
       },
       {
         "date": "OCT 2012",
         "company": "DRM Computer",
         "city": "Pontchâteau",
-        "description": "A week of internship doing computer fixing, troubleshooting and unmounting."
+        "description": "A week of internship doing computer fixing, troubleshooting and unmounting.",
+        "image": "https://image.flaticon.com/icons/svg/868/868784.svg"
       }
     ],
     "schools": [
@@ -90,25 +98,29 @@
         "date": "2017 > TODAY",
         "company": "Ynov Campus",
         "city": "Nantes",
-        "description": "Five years of studies in an engineering school specialised in computer sciences."
+        "description": "Five years of studies in an engineering school specialised in computer sciences.",
+        "image": "https://image.flaticon.com/icons/svg/1201/1201175.svg"
       },
       {
         "date": "2014 > 2017",
         "company": "Marcel Callo High School",
         "city": "Redon",
-        "description": "Scientific High School, specialised in engineering, computer and electronic sciences."
+        "description": "Scientific High School, specialised in engineering, computer and electronic sciences.",
+        "image": "https://image.flaticon.com/icons/svg/265/265681.svg"
       }
     ],
     "diplomas": [
       {
         "diploma": "French Scientific Baccalauréat",
         "option": "Engineering Sciences Option",
-        "description": "Similar to A-Level (UK) or High School Diploma (US). Acquired with AB and European mentions."
+        "description": "Similar to A-Level (UK) or High School Diploma (US). Acquired with AB and European mentions.",
+        "image": "https://image.flaticon.com/icons/svg/230/230357.svg"
       },
       {
         "diploma": "Cambridge English Certiﬁcate (CEC)",
         "option": "",
-        "description": "B1 level confirmation in english."
+        "description": "B1 level confirmation in english.",
+        "image": "https://image.flaticon.com/icons/svg/1377/1377975.svg"
       }
     ]
   },

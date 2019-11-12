@@ -1,11 +1,14 @@
 <template>
   <div class="card">
-      <img class="dot" src="@/assets/dot.svg" alt="">
+    <img class="dot" src="@/assets/dot.svg" alt />
     <div :class="theme" class="body">
       <div class="card-header">
-        <div class="date">{{ date }}</div>
-        <div class="company">{{ company }}</div>
-        <div class="city">{{ city }}</div>
+        <div class="exp-left">
+          <div class="date">{{ date }}</div>
+          <div class="company">{{ company }}</div>
+          <div class="city">{{ city }}</div>
+        </div>
+        <img class="exp-icon" :src="image" alt />
       </div>
       <hr />
       <div class="descri">{{ description }}</div>
@@ -20,12 +23,13 @@ export default {
     date: String,
     company: String,
     city: String,
-    description: String
+    description: String,
+    image: String
   },
   data() {
     return {
-      theme: localStorage.getItem('theme')
-    }
+      theme: localStorage.getItem("theme")
+    };
   }
 };
 </script>
@@ -34,19 +38,23 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap");
 
 .card {
-    margin: 30px 10px 10px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin: 30px 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .body {
   width: 100%;
   border: 3px solid white;
   padding: 20px 20px 20px 20px;
-
+  transition: all 0.5s;
 
   color: white;
   font-family: "Lexend Deca", sans-serif;
+}
+
+.body:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
 }
 
 .body.fancy {
@@ -57,6 +65,14 @@ export default {
   border-radius: 12px;
 }
 
+.card-header {
+  display: flex;
+  justify-content:space-between;
+}
+.exp-icon {
+  width: 50px;
+  height: 50px;
+}
 .dot {
   width: 10px;
   margin-right: 20px;
