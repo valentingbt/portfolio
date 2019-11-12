@@ -2,8 +2,11 @@
   <div class="home animated fast" :class="animation">
     <div :class="theme" class="profil">
       <div class="settings">
+        <!-- Change theme -->
+
         <div class="setting">
           <!--<div @click="changeTheme('dark')">dark</div>-->
+
           <div
             :class="{ active: theme === 'light' }"
             @click="changeTheme('light')"
@@ -13,13 +16,18 @@
             @click="changeTheme('fancy')"
           >{{ $t("home.fancy") }}</div>
         </div>
+
         <div :class="theme" class="hr-y"></div>
-        <div class="setting locale-changer">
+
+        <!-- Change language -->
+
+        <div class="setting">
           <div :class="{ active: $i18n.locale === 'fr' }" @click="changeLocale('fr')">français</div>
           <div :class="{ active: $i18n.locale === 'en' }" @click="changeLocale('en')">english</div>
         </div>
       </div>
 
+      <!-- Name logo for FANCY theme -->
       <img
         :class="shake"
         @click="shakeContent"
@@ -28,6 +36,8 @@
         src="@/assets/name.svg"
         alt
       />
+
+      <!-- Name logo for LIGHT theme -->
       <img
         :class="shake"
         @click="shakeContent"
@@ -37,9 +47,12 @@
         alt
       />
 
+      <!-- Current status -->
       <div :class="[bounce,theme]" class="statut" @click="changeStatut">{{ $t("home.statut")[i] }}</div>
     </div>
+
     <SocialRow class="middle" />
+
     <MenuRow />
   </div>
 </template>
