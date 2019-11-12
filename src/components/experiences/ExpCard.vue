@@ -40,7 +40,7 @@ export default {
     justify-content: center;
 }
 .body {
-  width: 350px;
+  width: 100%;
   border: 3px solid white;
   padding: 20px 20px 20px 20px;
 

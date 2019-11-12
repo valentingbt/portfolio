@@ -3,38 +3,45 @@
     <div class="quit">
       <img @click="leavePage" class="cross" src="../assets/close.svg" alt />
     </div>
+
     <div class="columns animated fadeInUp">
       <div class="col left">
-        <div class="title">{{ $t("experiences.studies") }}</div>
+        <div class="schools">
+          <div class="title">{{ $t("experiences.studies") }}</div>
 
-        <div v-for="school in schools" v-bind:key="school">
-          <exp-card
-            :date="school.date"
-            :company="school.company"
-            :city="school.city"
-            :description="school.description"
-          />
+          <div class="school" v-for="school in schools" v-bind:key="school">
+            <exp-card
+              :date="school.date"
+              :company="school.company"
+              :city="school.city"
+              :description="school.description"
+            />
+          </div>
         </div>
 
-        <div class="title">{{ $t("experiences.qualifications") }}</div>
-        <div v-for="diploma in diplomas" v-bind:key="diploma">
-          <dip-card
-            :diploma="diploma.diploma"
-            :option="diploma.option"
-            :description="diploma.description"
-          />
+        <div class="diplomas">
+          <div class="title">{{ $t("experiences.qualifications") }}</div>
+          <div v-for="diploma in diplomas" v-bind:key="diploma">
+            <dip-card
+              :diploma="diploma.diploma"
+              :option="diploma.option"
+              :description="diploma.description"
+            />
+          </div>
         </div>
       </div>
 
       <div class="col">
-        <div class="title">{{ $t("experiences.experience") }}</div>
-        <div v-for="company in companies" v-bind:key="company">
-          <exp-card
-            :date="company.date"
-            :company="company.company"
-            :city="company.city"
-            :description="company.description"
-          />
+        <div class="companies">
+          <div class="title">{{ $t("experiences.experience") }}</div>
+          <div v-for="company in companies" v-bind:key="company">
+            <exp-card
+              :date="company.date"
+              :company="company.company"
+              :city="company.city"
+              :description="company.description"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -87,7 +94,22 @@ export default {
   border-radius: 17px 17px 0 0;
 }
 
+.schools {
+  width: 700px;
+  margin-bottom: 30px;
+}
+
 .left {
   justify-content: flex-start;
+  align-items: center;
+}
+
+.companies {
+  align-items: center;
+  width: 700px;
+}
+
+.diplomas {
+  width: 700px;
 }
 </style>

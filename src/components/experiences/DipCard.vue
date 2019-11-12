@@ -41,7 +41,7 @@ export default {
 }
 
 .body {
-  width: 400px;
+  width: 100%;
   padding: 20px 20px 20px 20px;
   text-align: center;
   border: 3px solid white;
