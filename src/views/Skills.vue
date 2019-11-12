@@ -5,14 +5,14 @@
     </div>
     <div class="title">{{ $t("home.skills") }}</div>
     <div class="columns animated fadeInUp">
-      <div class="col">
+      <div class="col two-col">
         <SkillCard title="Office" :items="skills.office" />
         <SkillCard title="Design" :items="skills.design" />
       </div>
       <div class="col">
         <SkillCard class="middle-col" title="Web" :items="skills.web" />
       </div>
-      <div class="col">
+      <div class="col two-col">
         <SkillCard :title="$i18n.t('skills.software')" :items="skills.software" />
         <SkillCard :title="$i18n.t('skills.languages')" :items="$i18n.t('skills.language')" />
       </div>
@@ -96,12 +96,12 @@ export default {
   border-radius: 17px 17px 0 0;
 }
 
-.col {
-  flex: 1;
+.two-col {
+  justify-content: space-between;
 }
 
 .middle-col {
-  height: 525px;
+  height: 100%;
 }
 
 /* "OTHER" PART */
@@ -129,10 +129,6 @@ export default {
   html,
   body {
     overflow: unset;
-  }
-
-  .middle-col {
-    height: auto;
   }
 
   .other-buttons {

@@ -4,14 +4,24 @@
       <img @click="leavePage" class="cross" src="../assets/close.svg" alt />
     </div>
     <div class="columns animated fadeInUp">
-      <div class="col">
+      <div class="col left">
         <div class="title">{{ $t("experiences.studies") }}</div>
+
         <div v-for="school in schools" v-bind:key="school">
           <exp-card
             :date="school.date"
             :company="school.company"
             :city="school.city"
             :description="school.description"
+          />
+        </div>
+
+        <div class="title">{{ $t("experiences.qualifications") }}</div>
+        <div v-for="diploma in diplomas" v-bind:key="diploma">
+          <dip-card
+            :diploma="diploma.diploma"
+            :option="diploma.option"
+            :description="diploma.description"
           />
         </div>
       </div>
@@ -24,17 +34,6 @@
             :company="company.company"
             :city="company.city"
             :description="company.description"
-          />
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="title">{{ $t("experiences.qualifications") }}</div>
-        <div v-for="diploma in diplomas" v-bind:key="diploma">
-          <dip-card
-            :diploma="diploma.diploma"
-            :option="diploma.option"
-            :description="diploma.description"
           />
         </div>
       </div>
@@ -56,11 +55,11 @@ export default {
   },
   data() {
     return {
-      companies: this.$i18n.t('experiences.companies'),
-      schools: this.$i18n.t('experiences.schools'),
-      diplomas: this.$i18n.t('experiences.diplomas'),
+      companies: this.$i18n.t("experiences.companies"),
+      schools: this.$i18n.t("experiences.schools"),
+      diplomas: this.$i18n.t("experiences.diplomas"),
       animation2: "slideInUp",
-      theme: localStorage.getItem('theme')
+      theme: localStorage.getItem("theme")
     };
   },
   methods: {
@@ -72,13 +71,12 @@ export default {
   mounted() {
     const el = document.body;
     setTimeout(() => el.classList.remove("over").bind(this), 1100);
-    scroll(0,0);
+    scroll(0, 0);
   }
 };
 </script>
 
 <style>
-
 .experiences.fancy {
   background: #754cbd;
   border-radius: 30px 30px 0 0;
@@ -89,7 +87,7 @@ export default {
   border-radius: 17px 17px 0 0;
 }
 
-.col {
-  flex: 1;
+.left {
+  justify-content: flex-start;
 }
 </style>

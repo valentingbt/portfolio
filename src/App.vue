@@ -23,7 +23,7 @@ export default {
       localStorage.setItem("lang", "en");
     }
 
-    this.$i18n.locale = localStorage.getItem("lang")
+    this.$i18n.locale = localStorage.getItem("lang");
   }
 };
 </script>
@@ -46,7 +46,6 @@ body {
 p {
   color: white;
   font-family: "Lexend Deca", sans-serif;
-  font-size: 1em;
 }
 
 .view {
@@ -133,6 +132,13 @@ a {
   width: 100%;
   display: flex;
   margin-top: 30px;
+  font-size: 0.875rem;
+}
+
+.col {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 
 /* Title and quit */
@@ -152,10 +158,15 @@ a {
   width: 20px;
   height: 20px;
   margin: 25px 30px 0px 0px;
+  transition: all 800ms ease-in-out;
 }
 
 .cross:hover {
+  opacity: 0.6;
   cursor: pointer;
+  -ms-transform: rotate(360deg); /* IE 9 */
+  -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+  transform: rotate(360deg);
 }
 
 /* scrollbar */
