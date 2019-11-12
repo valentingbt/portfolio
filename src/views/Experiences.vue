@@ -115,4 +115,18 @@ export default {
 .diplomas {
   width: 700px;
 }
+
+@media screen and (max-width: 1170px) {
+  .schools {
+    width: 100%;
+  }
+
+  .companies {
+    width: 100%;
+  }
+
+  .diplomas {
+    width: 100%;
+  }
+}
 </style>
