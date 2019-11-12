@@ -20,8 +20,22 @@
         </div>
       </div>
 
-      <img v-if="theme === 'fancy'" class="name shine" src="@/assets/name.svg" alt />
-      <img v-if="theme === 'light'" class="name-light" src="@/assets/name_light.svg" alt />
+      <img
+        :class="shake"
+        @click="shakeContent"
+        v-if="theme === 'fancy'"
+        class="name"
+        src="@/assets/name.svg"
+        alt
+      />
+      <img
+        :class="shake"
+        @click="shakeContent"
+        v-if="theme === 'light'"
+        class="name-light"
+        src="@/assets/name_light.svg"
+        alt
+      />
 
       <div :class="[bounce,theme]" class="statut" @click="changeStatut">{{ $t("home.statut")[i] }}</div>
     </div>
@@ -46,6 +60,7 @@ export default {
     return {
       animation: "fadeIn",
       bounce: "",
+      shake: "",
       statut: home.statut,
       i: 0,
       theme: localStorage.getItem("theme")
@@ -72,6 +87,11 @@ export default {
         localStorage.setItem("theme", color);
         location.reload();
       }
+    },
+    shakeContent() {
+      this.shake = "animated bounce";
+      setTimeout(() => (this.shake = ""), 1000);
+      setTimeout(() => this.changeStatut(), 600);
     }
   },
   beforeRouteLeave(to, from, next) {
