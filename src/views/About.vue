@@ -66,13 +66,14 @@ export default {
 .profil_pic {
   position: relative;
   padding: 10px;
-  width: 150px;
-  bottom: -90px;
+  width: 130px;
+  bottom: -80px;
   margin-left: 60px;
   z-index: 1;
 }
 .prez {
   padding: 40px;
+  font-size: 1.1rem;
 }
 
 .border {
@@ -81,22 +82,20 @@ export default {
 }
 
 .prez-text {
-  font-size: 1.5em;
-  /*width: 1000px;*/
   margin-left: 20px;
   margin-top: 40px;
 }
 
 .hello {
-  font-size: 1.8em;
+  font-size: 1.8rem;
 }
 
 .i-am {
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 
 .logo {
-  width: 80px;
+  width: 70px;
   position: relative;
   padding: 10px;
   bottom: -50px;
@@ -113,7 +112,7 @@ img.light {
 }
 
 .contact {
-  font-size: 1.4em;
-  padding: 20px 20px 10px 20px;
+  font-size: 1.1rem;
+  padding: 20px 40px 10px 40px;
 }
 </style>
