@@ -18,7 +18,7 @@
       <div
         v-if="plus === true"
         @click="showSeemore"
-        :class="{ seemoreShowed: visible }"
+        :class="[{ seemoreShowed: visible }, theme]"
         class="seemore"
       >
         <div :class="infoanimation" class="see-content animated">
@@ -56,7 +56,7 @@ export default {
     more_title: String,
     more_link: String,
     more_background: String,
-    infos: Object
+    infos: Object,
   },
   data() {
     return {
@@ -132,6 +132,7 @@ export default {
 
 .body.light {
   border-radius: 12px;
+  background-color: #00a6f3;
 }
 
 .card-header {
@@ -172,8 +173,16 @@ hr {
   border-left: solid white 3px;
   border-right: solid white 3px;
   border-bottom: solid white 3px;
-  border-radius: 0 0 42px 42px;
   cursor: pointer;
+}
+
+.seemore.fancy {
+  border-radius: 0 0 42px 42px;
+}
+
+.seemore.light {
+    border-radius: 0 0 17px 17px;
+
 }
 
 .seemoreShowed {
