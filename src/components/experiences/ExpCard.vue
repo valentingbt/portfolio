@@ -176,6 +176,7 @@ hr {
   border-right: solid white 3px;
   border-bottom: solid white 3px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .seemore.fancy {

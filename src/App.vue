@@ -127,6 +127,14 @@ a {
   text-decoration: none;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 /* Pages with columns */
 
 .columns {
