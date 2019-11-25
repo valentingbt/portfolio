@@ -41,7 +41,8 @@
         "company": "Lukyna",
         "city": "Drefféac",
         "description": "Stage d’un mois en tant que développeur web sur le site e-commerce de l’entreprise Lukyna. Amélioration de l’ergonomie, du responsive et du référencement.",
-        "image": "https://image.flaticon.com/icons/svg/1162/1162499.svg"
+        "image": "https://image.flaticon.com/icons/svg/1162/1162499.svg",
+        "plus": true
       },
       {
         "date": "MAI 2018 > AUJOURD'HUI",
@@ -55,7 +56,8 @@
         "company": "Ippon Technologies",
         "city": "Nantes",
         "description": "Stage de deux mois et demi en développement sur AngularJS et Ionic dans le but de créer un jeu mobile cross-plateform. ",
-        "image": "https://image.flaticon.com/icons/svg/958/958826.svg"
+        "image": "https://image.flaticon.com/icons/svg/958/958826.svg",
+        "plus":true
       },
       {
         "date": "JUIL 2016 > SEPT 2017",

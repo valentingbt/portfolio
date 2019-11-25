@@ -29,10 +29,12 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap");
 html,
 body {
   height: 100%;
   margin: 0;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 .app.fancy {
@@ -45,7 +47,6 @@ body {
 
 p {
   color: white;
-  font-family: "Lexend Deca", sans-serif;
 }
 
 .view {

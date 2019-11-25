@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="body" :class="theme">
-      <img class="dip-icon" :src="image" alt />
+      <img @click="animContent" :class="animation" class="dip-icon" :src="image" alt />
       <div class="diploma">{{ diploma }}</div>
       <div class="option">{{ option }}</div>
 
@@ -23,8 +23,15 @@ export default {
   },
   data() {
     return {
-      theme: localStorage.getItem("theme")
+      theme: localStorage.getItem("theme"),
+      animation: ""
     };
+  },
+  methods: {
+    animContent() {
+      this.animation = "animated jello";
+      setTimeout(() => (this.animation = ""), 1000);
+    }
   }
 };
 </script>
@@ -50,8 +57,14 @@ export default {
   transition: all 0.5s;
 }
 
-.body:hover {
-  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+.body.fancy:hover {
+  box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.1);
+  background-color: rgb(131, 94, 196)
+}
+
+.body.light:hover {
+  box-shadow: 0 0 100px 10px rgba(255, 255, 255, 0.2);
+  background-color: rgb(51, 184, 245);
 }
 
 .body.fancy {
