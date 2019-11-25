@@ -1,6 +1,7 @@
 <template>
   <div
     class="miniproj"
+    :class="theme"
     @mouseover="hover = true"
     @mouseleave="hover = false"
     @click="goToLink(link)"
@@ -20,7 +21,8 @@ export default {
   },
   data() {
     return {
-      hover: false
+      hover: false,
+      theme: localStorage.getItem("theme")
     };
   },
   methods: {
@@ -36,13 +38,20 @@ export default {
 .miniproj {
   overflow: hidden;
   border: 3px solid white;
-  border-radius: 42px;
   width: 160px;
   height: 65px;
   position: relative;
   text-align: center;
   color: white;
   text-decoration: none;
+}
+
+.miniproj.fancy {
+  border-radius: 42px;
+}
+
+.miniproj.light {
+    border-radius: 12px;
 }
 
 .miniproj:hover {

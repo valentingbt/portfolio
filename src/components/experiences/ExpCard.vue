@@ -22,15 +22,17 @@
         class="seemore"
       >
         <div :class="infoanimation" class="see-content animated">
-          <div>Projet(s) :</div>
+          <div>{{ $t("experiences.projects") }}</div>
           <br />
-          <MiniProj
-            v-for="info in infos"
-            v-bind:key="info"
-            :title="info.title"
-            :link="info.link"
-            :background="info.background"
-          ></MiniProj>
+          <div class="minicont">
+            <MiniProj
+              v-for="info in infos"
+              v-bind:key="info"
+              :title="info.title"
+              :link="info.link"
+              :background="info.background"
+            ></MiniProj>
+          </div>
         </div>
 
         <div :class="buttonChange" class="button"></div>
@@ -56,7 +58,7 @@ export default {
     more_title: String,
     more_link: String,
     more_background: String,
-    infos: Object,
+    infos: Object
   },
   data() {
     return {
@@ -181,8 +183,7 @@ hr {
 }
 
 .seemore.light {
-    border-radius: 0 0 17px 17px;
-
+  border-radius: 0 0 12px 12px;
 }
 
 .seemoreShowed {
@@ -194,6 +195,10 @@ hr {
   margin: 60px 20px 20px 20px;
   opacity: 0;
   width: auto;
+}
+
+.minicont {
+  display: flex;
 }
 
 .button {
