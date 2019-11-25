@@ -44,9 +44,7 @@
               :description="company.description"
               :image="company.image"
               :plus="company.plus"
-              :more_title="company.more_title"
-              :more_link="company.more_link"
-              :more_background="company.more_background"
+              :infos="company.infos"
             />
           </div>
         </div>

@@ -24,7 +24,13 @@
         <div :class="infoanimation" class="see-content animated">
           <div>Projet(s) :</div>
           <br />
-          <MiniProj :title="more_title" :link="more_link" :background="more_background"></MiniProj>
+          <MiniProj
+            v-for="info in infos"
+            v-bind:key="info"
+            :title="info.title"
+            :link="info.link"
+            :background="info.background"
+          ></MiniProj>
         </div>
 
         <div :class="buttonChange" class="button"></div>
@@ -49,7 +55,8 @@ export default {
     plus: Boolean,
     more_title: String,
     more_link: String,
-    more_background: String
+    more_background: String,
+    infos: Object
   },
   data() {
     return {

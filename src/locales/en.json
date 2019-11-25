@@ -57,9 +57,13 @@
         "description": "Two-month internship as a web developer using AngularJS and Ionic to create a cross-platform mobile game.",
         "image": "https://image.flaticon.com/icons/svg/958/958826.svg",
         "plus": true,
-        "more_title": "Bad Meteor",
-        "more_link": "https://play.google.com/store/apps/details?id=fr.ippon.badmeteor&hl=en_US",
-        "more_background": "https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/ef/7a/2b/ef7a2bff-c576-f177-1d12-a2d5bc07a9fd/pr_source.png/576x768bb.png"
+        "infos": {
+          "hey": {
+            "title": "Bad Meteor",
+            "link": "https://play.google.com/store/apps/details?id=fr.ippon.badmeteor&hl=en_US",
+            "background": "https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/ef/7a/2b/ef7a2bff-c576-f177-1d12-a2d5bc07a9fd/pr_source.png/576x768bb.png"
+          }
+        }
       },
       {
         "date": "JULY 2016 > SEPT 2017",
