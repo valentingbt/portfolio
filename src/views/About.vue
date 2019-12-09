@@ -5,20 +5,26 @@
     </div>
     <div class="title">INFOS</div>
     <img :class="theme" class="profil_pic animated fadeInDown" src="@/assets/photo.svg" alt />
-    <div class="prez animated fadeInUp border">
+    <div
+      :class="[{border : theme == 'light' || theme == 'fancy'}, {darkbody : theme =='dark'}]"
+      class="prez animated fadeInUp"
+    >
       <p class="prez-text">
-        <span class="hello">{{ $t('about.hello') }}<br></span>
+        <span class="hello">
+          {{ $t('about.hello') }}
+          <br />
+        </span>
         <span class="i-am">{{ $t("about.i-am") }}</span>
         {{ $t("about.prez") }}
-        
       </p>
     </div>
-      <img :class="theme" class="logo animated fadeInDown" src="@/assets/logo.png" alt="">
-    <div class="contact animated fadeInUp border">
-
+    <img :class="theme" class="logo animated fadeInDown" src="@/assets/logo.png" alt />
+    <div
+      :class="[{border : theme == 'light' || theme == 'fancy'}, {darkbody : theme =='dark'}]"
+      class="contact animated fadeInUp"
+    >
       <p>{{ $t("about.app-info") }}</p>
     </div>
-
   </div>
 </template>
 
@@ -30,7 +36,7 @@ export default {
   data() {
     return {
       animation: "slideInUp",
-      theme: localStorage.getItem('theme')
+      theme: localStorage.getItem("theme")
     };
   },
   methods: {
@@ -42,7 +48,7 @@ export default {
   mounted() {
     const el = document.body;
     setTimeout(() => el.classList.remove("over").bind(this), 1100);
-    scroll(0,0);
+    scroll(0, 0);
   }
 };
 </script>
@@ -63,6 +69,11 @@ export default {
   border-radius: 17px 17px 0 0;
 }
 
+.about.dark {
+  background: #121212;
+  border-radius: 30px 30px 0 0;
+}
+
 .profil_pic {
   position: relative;
   padding: 10px;
@@ -79,6 +90,11 @@ export default {
 .border {
   border: 3px solid white;
   border-radius: 42px;
+}
+
+.darkbody {
+  background-color: rgb(26, 26, 26);
+  border-radius: 17px;
 }
 
 .prez-text {

@@ -45,6 +45,10 @@ body {
   background: #e3f2fd;
 }
 
+.app.dark {
+  background: black;
+}
+
 p {
   color: white;
 }

@@ -24,24 +24,24 @@
           class="button"
           title="Git"
           :icon="require('../assets/git.svg')"
-          :color="'background:#00a6f3'"
-          :iconColor="'background:#f05033'"
+          :color="'#00a6f3'"
+          :iconColor="'#f05033'"
         />
 
         <SocialButton
           class="button"
           title="SQL"
           :icon="require('../assets/sql.png')"
-          :color="'background:#00a6f3'"
-          :iconColor="'background:#4a7fc6'"
+          :color="'#00a6f3'"
+          :iconColor="'#4a7fc6'"
         />
 
         <SocialButton
           class="button"
           title="NoSQL"
           :icon="require('../assets/mongo.png')"
-          :color="'background:#00a6f3'"
-          :iconColor="'background:#191155'"
+          :color="'#00a6f3'"
+          :iconColor="'#191155'"
         />
       </div>
     </div>
@@ -94,6 +94,11 @@ export default {
 .skills.light {
   background: #00a6f3;
   border-radius: 17px 17px 0 0;
+}
+
+.skills.dark {
+  background: #121212;
+  border-radius: 30px 30px 0 0;
 }
 
 .two-col {

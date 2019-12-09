@@ -1,7 +1,7 @@
 <template>
   <div :class="theme" class="card shine">
     <img v-if="theme === 'fancy'" :src="image" alt />
-    <img v-if="theme === 'light'" :src="image_light" alt />
+    <img v-if="theme === 'light' || theme === 'dark'" :src="image_light" alt />
     <p :class="theme">{{ title }}</p>
   </div>
 </template>
@@ -35,7 +35,7 @@ export default {
   justify-content: center;
   align-items: center;
   transition: 0.5s;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .card.fancy {
@@ -51,6 +51,11 @@ export default {
     0 6px 20px 0 rgba(0, 191, 243, 0.19);
 }
 
+.card.dark {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
 .card:hover {
   filter: brightness(1.2);
   transition: 0.5s;
@@ -63,7 +68,7 @@ p {
   color: black;
 }
 
-p.fancy {
+p.fancy, p.dark {
   color: white;
 }
 

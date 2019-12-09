@@ -53,13 +53,12 @@ export default {
   width: 100%;
   padding: 20px 20px 20px 20px;
   text-align: center;
-  border: 3px solid white;
   transition: all 0.5s;
 }
 
 .body.fancy:hover {
   box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.1);
-  background-color: rgb(131, 94, 196)
+  background-color: rgb(131, 94, 196);
 }
 
 .body.light:hover {
@@ -67,12 +66,23 @@ export default {
   background-color: rgb(51, 184, 245);
 }
 
+.body.dark:hover {
+  background-color: rgba(30, 30, 30);
+}
+
 .body.fancy {
   border-radius: 42px;
+  border: 3px solid white;
 }
 
 .body.light {
   border-radius: 12px;
+  border: 3px solid white;
+}
+
+.body.dark {
+  border-radius: 12px;
+  background-color: rgba(26, 26, 26);
 }
 
 hr {

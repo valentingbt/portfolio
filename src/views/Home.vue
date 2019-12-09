@@ -5,7 +5,7 @@
         <!-- Change theme -->
 
         <div class="setting">
-          <!--<div @click="changeTheme('dark')">dark</div>-->
+          <div :class="{ active: theme === 'dark' }" @click="changeTheme('dark')">dark</div>
 
           <div
             :class="{ active: theme === 'light' }"
@@ -44,6 +44,16 @@
         v-if="theme === 'light'"
         class="name-light"
         src="@/assets/name_light.svg"
+        alt
+      />
+
+            <!-- Name logo for DARK theme -->
+      <img
+        :class="shake"
+        @click="shakeContent"
+        v-if="theme === 'dark'"
+        class="name"
+        src="@/assets/name_dark.svg"
         alt
       />
 
@@ -143,7 +153,7 @@ export default {
   background: none;
 }
 
-.profil.fancy {
+.profil.fancy, profil.dark {
   color: white;
 }
 
@@ -195,7 +205,7 @@ export default {
   height: 20px;
 }
 
-.hr-y.fancy {
+.hr-y.fancy, .hr-y.dark {
   background-color: white;
 }
 
@@ -216,7 +226,7 @@ export default {
   border-radius: 30px;
 }
 
-.statut.light {
+.statut.light, .statut.dark {
   border-radius: 12px;
 }
 

@@ -99,6 +99,11 @@ export default {
   border-radius: 17px 17px 0 0;
 }
 
+.experiences.dark {
+  background: #121212;
+  border-radius: 30px 30px 0 0;
+}
+
 .schools {
   width: 700px;
   margin-bottom: 30px;

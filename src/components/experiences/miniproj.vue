@@ -28,7 +28,7 @@ export default {
   methods: {
     goToLink(link) {
       // window.location.href = link;
-      window.open(link,'_blank')
+      window.open(link, "_blank");
     }
   }
 };
@@ -37,7 +37,6 @@ export default {
 <style scoped>
 .miniproj {
   overflow: hidden;
-  border: 3px solid white;
   width: 160px;
   height: 65px;
   position: relative;
@@ -48,10 +47,17 @@ export default {
 
 .miniproj.fancy {
   border-radius: 42px;
+  border: 3px solid white;
 }
 
 .miniproj.light {
-    border-radius: 12px;
+  border-radius: 12px;
+  border: 3px solid white;
+}
+
+.miniproj.dark {
+  border-radius: 12px;
+  border: 2px solid rgb(150, 150, 150);
 }
 
 .miniproj:hover {

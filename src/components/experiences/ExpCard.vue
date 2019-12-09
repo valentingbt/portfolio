@@ -108,7 +108,6 @@ export default {
 }
 .body {
   position: relative;
-  border: 3px solid white;
   padding: 20px 20px 20px 20px;
   transition: 0.5s;
 
@@ -127,14 +126,25 @@ export default {
   background-color: rgb(51, 184, 245);
 }
 
+.body.dark:hover {
+  background-color: rgba(30, 30, 30);
+}
+
 .body.fancy {
   border-radius: 42px;
   background-color: #754cbd;
+  border: 3px solid white;
 }
 
 .body.light {
   border-radius: 12px;
   background-color: #00a6f3;
+  border: 3px solid white;
+}
+
+.body.dark {
+  border-radius: 12px;
+  background-color: rgb(26, 26, 26);
 }
 
 .card-header {
@@ -172,19 +182,27 @@ hr {
   height: 70px;
   color: white;
   align-self: flex-end;
-  border-left: solid white 3px;
-  border-right: solid white 3px;
-  border-bottom: solid white 3px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
 
 .seemore.fancy {
   border-radius: 0 0 42px 42px;
+  border-left: solid white 3px;
+  border-right: solid white 3px;
+  border-bottom: solid white 3px;
 }
 
 .seemore.light {
   border-radius: 0 0 12px 12px;
+  border-left: solid white 3px;
+  border-right: solid white 3px;
+  border-bottom: solid white 3px;
+}
+
+.seemore.dark {
+  border-radius: 0 0 12px 12px;
+  background: rgba(30, 30, 30);
 }
 
 .seemoreShowed {
