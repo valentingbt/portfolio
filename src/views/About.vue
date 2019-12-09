@@ -5,10 +5,7 @@
     </div>
     <div class="title">INFOS</div>
     <img :class="theme" class="profil_pic animated fadeInDown" src="@/assets/photo.svg" alt />
-    <div
-      :class="[{border : theme == 'light' || theme == 'fancy'}, {darkbody : theme =='dark'}]"
-      class="prez animated fadeInUp"
-    >
+    <MessageBlock>
       <p class="prez-text">
         <span class="hello">
           {{ $t('about.hello') }}
@@ -17,22 +14,23 @@
         <span class="i-am">{{ $t("about.i-am") }}</span>
         {{ $t("about.prez") }}
       </p>
-    </div>
-    <img :class="theme" class="logo animated fadeInDown" src="@/assets/logo.png" alt />
-    <div
-      :class="[{border : theme == 'light' || theme == 'fancy'}, {darkbody : theme =='dark'}]"
-      class="contact animated fadeInUp"
-    >
+    </MessageBlock>
+    <!-- <img :class="theme" class="logo animated fadeInDown" src="@/assets/logo.png" alt /> -->
+    <MessageBlock :icon="require('@/assets/logo.png')">
       <p>{{ $t("about.app-info") }}</p>
-    </div>
+    </MessageBlock>
   </div>
 </template>
 
 <script>
 import router from "../router";
+import MessageBlock from "../components/about/MessageBloc";
 
 export default {
   name: "about",
+  components: {
+    MessageBlock
+  },
   data() {
     return {
       animation: "slideInUp",
@@ -78,18 +76,13 @@ export default {
   position: relative;
   padding: 10px;
   width: 130px;
-  bottom: -80px;
+  bottom: -70px;
   margin-left: 60px;
   z-index: 1;
 }
 .prez {
   padding: 40px;
   font-size: 1.1rem;
-}
-
-.border {
-  border: 3px solid white;
-  border-radius: 42px;
 }
 
 .darkbody {
@@ -103,21 +96,14 @@ export default {
 }
 
 .hello {
-  font-size: 1.8rem;
+  font-size: 1.8rem;  
 }
 
 .i-am {
   font-size: 1.4rem;
 }
 
-.logo {
-  width: 70px;
-  position: relative;
-  padding: 10px;
-  bottom: -50px;
-  margin-left: 60px;
-  z-index: 1;
-}
+
 
 img.fancy {
   background-color: #754cbd;
@@ -125,10 +111,5 @@ img.fancy {
 
 img.light {
   background-color: #00a6f3;
-}
-
-.contact {
-  font-size: 1.1rem;
-  padding: 20px 40px 10px 40px;
 }
 </style>
