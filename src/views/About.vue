@@ -1,5 +1,5 @@
 <template>
-  <div class="about animated" :class="[animation, theme]">
+  <div class="about animated" :class="[animation, theme]" v-on:keyup.enter="leavePage">
     <div class="quit">
       <img @click="leavePage" class="cross" src="../assets/close.svg" alt />
     </div>
@@ -15,7 +15,6 @@
         {{ $t("about.prez") }}
       </p>
     </MessageBlock>
-    <!-- <img :class="theme" class="logo animated fadeInDown" src="@/assets/logo.png" alt /> -->
     <MessageBlock :icon="require('@/assets/logo.png')">
       <p>{{ $t("about.app-info") }}</p>
     </MessageBlock>
@@ -53,7 +52,6 @@ export default {
 
 <style>
 .about {
-  padding: 0 30px 0 30px;
   height: 100%;
 }
 
@@ -96,14 +94,12 @@ export default {
 }
 
 .hello {
-  font-size: 1.8rem;  
+  font-size: 1.8rem;
 }
 
 .i-am {
   font-size: 1.4rem;
 }
-
-
 
 img.fancy {
   background-color: #754cbd;

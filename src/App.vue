@@ -172,10 +172,11 @@ a {
   height: 20px;
   margin: 25px 30px 0px 0px;
   transition: all 800ms ease-in-out;
+  opacity: 0.5;
 }
 
 .cross:hover {
-  opacity: 0.6;
+    opacity: 1;
   cursor: pointer;
   -ms-transform: rotate(360deg); /* IE 9 */
   -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */

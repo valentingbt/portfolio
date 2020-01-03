@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="message-bloc">
     <img v-if="icon" :class="theme" class="logo animated fadeInDown" :src="icon" alt />
     <div
       :class="[{border : theme == 'light' || theme == 'fancy'}, {darkbody : theme =='dark'}]"
@@ -25,6 +25,9 @@ export default {
 </script>
 
 <style scoped>
+.message-bloc {
+  margin: 0 30px 0 30px;
+}
 .border {
   border: 3px solid white;
   border-radius: 42px;
