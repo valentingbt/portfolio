@@ -1,6 +1,6 @@
 <template>
   <div class="message-bloc">
-    <img v-if="icon" :class="theme" class="logo animated fadeInDown" :src="icon" alt />
+    <img v-if="icon" :class="theme" :style="addImgStyle" :width="imgSize" class="logo animated fadeInDown" :src="icon" alt />
     <div
       :class="[{border : theme == 'light' || theme == 'fancy'}, {darkbody : theme =='dark'}]"
       class="body animated fadeInUp"
@@ -14,7 +14,9 @@
 export default {
   name: "MessageBlock",
   props:{
-    icon:String
+    icon:String,
+    imgSize: String,
+    addImgStyle: String
   },
   data() {
     return {
@@ -45,7 +47,6 @@ export default {
 }
 
 .logo {
-  width: 70px;
   position: relative;
   padding: 10px;
   bottom: -50px;

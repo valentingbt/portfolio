@@ -4,8 +4,8 @@
       <img @click="leavePage" class="cross" src="../assets/close.svg" alt />
     </div>
     <div class="title">INFOS</div>
-    <img :class="theme" class="profil_pic animated fadeInDown" src="@/assets/photo.svg" alt />
-    <MessageBlock>
+    <!-- <img :class="theme" class="profil_pic animated fadeInDown" src="@/assets/photo.svg" alt /> -->
+    <MessageBlock :icon="require('@/assets/photo.svg')" imgSize="130px" addImgStyle="bottom:-70px">
       <p class="prez-text">
         <span class="hello">
           {{ $t('about.hello') }}
@@ -15,7 +15,7 @@
         {{ $t("about.prez") }}
       </p>
     </MessageBlock>
-    <MessageBlock :icon="require('@/assets/logo.png')">
+    <MessageBlock :icon="require('@/assets/logo.png')" imgSize="70px">
       <p>{{ $t("about.app-info") }}</p>
     </MessageBlock>
   </div>
