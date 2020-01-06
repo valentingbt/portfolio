@@ -27,35 +27,37 @@
         </div>
       </div>
 
-      <!-- Name logo for FANCY theme -->
-      <img
-        :class="shake"
-        @click="shakeContent"
-        v-if="theme === 'fancy'"
-        class="name"
-        src="@/assets/name.svg"
-        alt
-      />
+      <div class="name">
+        <!-- Name logo for FANCY theme -->
+        <img
+          :class="shake"
+          @click="shakeContent"
+          v-if="theme === 'fancy'"
+          class="name"
+          src="@/assets/name.svg"
+          alt
+        />
 
-      <!-- Name logo for LIGHT theme -->
-      <img
-        :class="shake"
-        @click="shakeContent"
-        v-if="theme === 'light'"
-        class="name-light"
-        src="@/assets/name_light.svg"
-        alt
-      />
+        <!-- Name logo for LIGHT theme -->
+        <img
+          :class="shake"
+          @click="shakeContent"
+          v-if="theme === 'light'"
+          class="name-light"
+          src="@/assets/name_light.svg"
+          alt
+        />
 
-            <!-- Name logo for DARK theme -->
-      <img
-        :class="shake"
-        @click="shakeContent"
-        v-if="theme === 'dark'"
-        class="name"
-        src="@/assets/name_dark.svg"
-        alt
-      />
+        <!-- Name logo for DARK theme -->
+        <img
+          :class="shake"
+          @click="shakeContent"
+          v-if="theme === 'dark'"
+          class="name"
+          src="@/assets/name_dark.svg"
+          alt
+        />
+      </div>
 
       <!-- Current status -->
       <div :class="[bounce,theme]" class="statut" @click="changeStatut">{{ $t("home.statut")[i] }}</div>
@@ -153,7 +155,8 @@ export default {
   background: none;
 }
 
-.profil.fancy, profil.dark {
+.profil.fancy,
+profil.dark {
   color: white;
 }
 
@@ -205,7 +208,8 @@ export default {
   height: 20px;
 }
 
-.hr-y.fancy, .hr-y.dark {
+.hr-y.fancy,
+.hr-y.dark {
   background-color: white;
 }
 
@@ -226,7 +230,8 @@ export default {
   border-radius: 30px;
 }
 
-.statut.light, .statut.dark {
+.statut.light,
+.statut.dark {
   border-radius: 12px;
 }
 

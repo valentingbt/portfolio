@@ -40,7 +40,7 @@
               <br />
               <span>
             {{ $t("about.usa_text2") }}
-                <a href>{{ $t("about.blog_link") }}</a>
+                <a href="http://blogvoyageusa.blogspot.com/">{{ $t("about.blog_link") }}</a>
               </span>
               <br />{{ $t("about.usa_text3") }}
               <br />
