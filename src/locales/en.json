@@ -135,8 +135,22 @@
   },
   "about": {
     "hello": "Hello !",
+    "who": "WHO AM I",
+    "passion_title":"My passions are...",
+    "traveling": "Traveling!",
+    "spain":"SPAIN",
+    "italy":"ITALY",
+    "canary":"CANARY ISLANDS",
+    "usa_text1": "Because I worked a month in Colorado in 2014, the United States quickly became a second home for me.",
+    "usa_text2": "You actually can found the blog of the 16 years old me discovering beauty of america for the first time here (in french) ->",
+    "blog_link":"My first blog",
+    "usa_text3": "I come back there sometimes since then to see my awesome american friends.",
+    "usa_text4": "Last time I came there was in April 2019, you can found some cool picture here ->",
+    "spain_text": "I used to go to Spain since my childhood, it’s somewhere my parents love to go to, and I almost always followed them there. Sun, beautiful cities, nice people, this is what I love to found back when I return to this wonderful country.",
+    "france_text": "Of course I had to put France here, but not only because it is my native country, but because I genuinely think it’s an awesome place to live in. I LOVE to travel all around France, all the cities are different, and all the regions have their own cultures.",
+    "but-also":"BUT ALSO",
     "i-am": "My name is Valentin Guibert,",
     "prez": "I am 21 and I am a third-year student in a computer engineering school to become a full-stack developer. I am passionate by new technologies and numeric since my childhood.",
-    "app-info": "This website is still not finished yet. Every data are not hard-coded, they are stocked in JSON objects in order to edit them easyly. Made with ❤️ thanks to the awesome VueJS framework."
+    "app-info": "This website is still not finished yet. Every data are not hard-coded, they are stocked in JSON objects in order to edit them easily. Made with ❤️ thanks to the awesome VueJS framework."
   }
 }

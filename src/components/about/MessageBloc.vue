@@ -1,10 +1,21 @@
 <template>
-  <div class="message-bloc">
-    <img v-if="icon" :class="theme" :style="addImgStyle" :width="imgSize" class="logo animated fadeInDown" :src="icon" alt />
+  <div>
+    <img
+      v-if="icon"
+      :class="theme"
+      :style="addImgStyle"
+      :width="imgSize"
+      class="logo animated fadeInDown"
+      :src="icon"
+      alt
+    />
     <div
       :class="[{border : theme == 'light' || theme == 'fancy'}, {darkbody : theme =='dark'}]"
       class="body animated fadeInUp"
     >
+      <div v-if="messageTitle" :class="theme" class="messageTitle animated fadeInDown">
+        <div>{{ messageTitle }}</div>
+      </div>
       <slot></slot>
     </div>
   </div>
@@ -13,10 +24,11 @@
 <script>
 export default {
   name: "MessageBlock",
-  props:{
-    icon:String,
+  props: {
+    icon: String,
     imgSize: String,
-    addImgStyle: String
+    addImgStyle: String,
+    messageTitle: String
   },
   data() {
     return {
@@ -27,9 +39,6 @@ export default {
 </script>
 
 <style scoped>
-.message-bloc {
-  margin: 0 30px 0 30px;
-}
 .border {
   border: 3px solid white;
   border-radius: 42px;
@@ -52,5 +61,29 @@ export default {
   bottom: -50px;
   margin-left: 60px;
   z-index: 1;
+}
+.messageTitle {
+  display: flex;
+}
+.messageTitle div {
+  color: white;
+  font-size: 1.3em;
+  padding: 0 15px 0 15px;
+  z-index: 1;
+}
+
+.messageTitle.fancy div {
+  background-color: #754cbd;
+}
+
+.messageTitle.light div {
+  background-color: #00a6f3;
+}
+
+.messageTitle.fancy div,
+.messageTitle.light div {
+  top: -35px;
+  position: relative;
+  left: 40px;
 }
 </style> 
