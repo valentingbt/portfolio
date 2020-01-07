@@ -1,9 +1,9 @@
 <template>
   <div class="skills animated" :class="[animation, theme]">
     <div class="quit">
-      <img @click="leavePage" class="cross" src="../assets/close.svg" alt />
+      <img @click="leavePage" :class="theme" class="cross" src="../assets/close.svg" alt />
     </div>
-    <div class="title">{{ $t("home.skills") }}</div>
+    <div :class="theme" class="title">{{ $t("home.skills") }}</div>
     <div class="columns animated fadeInUp">
       <div class="col two-col">
         <SkillCard title="Office" :items="skills.office" />
@@ -64,7 +64,7 @@ export default {
     return {
       skills: skillData,
       animation: "slideInUp",
-      theme: localStorage.getItem('theme')
+      theme: localStorage.getItem("theme")
     };
   },
   methods: {
@@ -76,7 +76,7 @@ export default {
   mounted() {
     const el = document.body;
     setTimeout(() => el.classList.remove("over").bind(this), 1100);
-    scroll(0,0);
+    scroll(0, 0);
   }
 };
 </script>
@@ -92,8 +92,11 @@ export default {
 }
 
 .skills.light {
-  background: #00a6f3;
+  background: white;
   border-radius: 17px 17px 0 0;
+  -webkit-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 1);
 }
 
 .skills.dark {

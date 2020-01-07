@@ -42,15 +42,11 @@ body {
 }
 
 .app.light {
-  background: #e3f2fd;
+  background: #ffffff;
 }
 
 .app.dark {
   background: black;
-}
-
-p {
-  color: white;
 }
 
 .view {
@@ -113,7 +109,8 @@ p {
   background: url(./assets/twinkling.png);
 }
 
-.twinkling.light {
+.twinkling.light,
+.twinkling.dark {
   background: none;
 }
 
@@ -156,10 +153,18 @@ a {
 
 /* Title and quit */
 .title {
-  color: white;
   font-family: "Lexend Deca", sans-serif;
   font-size: 2em;
   text-align: center;
+}
+
+.title.light {
+  color: #262626;
+}
+
+.title.dark,
+.title.fancy {
+  color: white;
 }
 
 .quit {
@@ -175,8 +180,12 @@ a {
   opacity: 0.5;
 }
 
+.cross.light {
+  filter: brightness(0);
+}
+
 .cross:hover {
-    opacity: 1;
+  opacity: 1;
   cursor: pointer;
   -ms-transform: rotate(360deg); /* IE 9 */
   -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */

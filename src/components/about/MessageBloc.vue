@@ -9,10 +9,7 @@
       :src="icon"
       alt
     />
-    <div
-      :class="[{border : theme == 'light' || theme == 'fancy'}, {darkbody : theme =='dark'}]"
-      class="body animated fadeInUp"
-    >
+    <div :class="[{border : theme == 'fancy'}, theme]" class="body animated fadeInUp">
       <div v-if="messageTitle" :class="theme" class="messageTitle animated fadeInDown">
         <div>{{ messageTitle }}</div>
       </div>
@@ -44,9 +41,17 @@ export default {
   border-radius: 42px;
 }
 
-.darkbody {
+.body.dark {
   color: white;
   background-color: rgb(26, 26, 26);
+  border-radius: 17px;
+}
+
+.body.light {
+  color: #262626;
+  -webkit-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
+  box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
   border-radius: 17px;
 }
 
@@ -66,22 +71,24 @@ export default {
   display: flex;
 }
 .messageTitle div {
-  color: white;
   font-size: 1.3em;
   padding: 0 15px 0 15px;
   z-index: 1;
 }
 
+.messageTitle.dark div,
+.messageTitle.fancy div {
+  color: white;
+}
+
+.messageTitle.light div {
+  color: #262626;
+}
 .messageTitle.fancy div {
   background-color: #754cbd;
 }
 
-.messageTitle.light div {
-  background-color: #00a6f3;
-}
-
-.messageTitle.fancy div,
-.messageTitle.light div {
+.messageTitle.fancy div {
   top: -35px;
   position: relative;
   left: 40px;

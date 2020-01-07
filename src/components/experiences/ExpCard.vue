@@ -35,7 +35,7 @@
           </div>
         </div>
 
-        <div :class="buttonChange" class="button"></div>
+        <div :class=[buttonChange,theme] class="button"></div>
       </div>
     </div>
   </div>
@@ -110,10 +110,17 @@ export default {
   position: relative;
   padding: 20px 20px 20px 20px;
   transition: 0.5s;
-
-  color: white;
   font-family: "Lexend Deca", sans-serif;
   z-index: 10;
+}
+
+.body.fancy,
+.body.dark {
+  color: white;
+}
+
+.body.light {
+  color: #262626;
 }
 
 .body.fancy:hover {
@@ -122,8 +129,9 @@ export default {
 }
 
 .body.light:hover {
-  box-shadow: 0 0 100px 10px rgba(255, 255, 255, 0.2);
-  background-color: rgb(51, 184, 245);
+  -webkit-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.1212);
+  -moz-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.12);
 }
 
 .body.dark:hover {
@@ -138,7 +146,10 @@ export default {
 
 .body.light {
   border-radius: 12px;
-  background-color: #00a6f3;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
+  box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
   border: 3px solid white;
 }
 
@@ -194,6 +205,9 @@ hr {
 }
 
 .seemore.light {
+  -webkit-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
+  box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
   border-radius: 0 0 12px 12px;
   border-left: solid white 3px;
   border-right: solid white 3px;
@@ -231,6 +245,10 @@ hr {
   /* Vertical line */
   /* horizontal line */
 }
+.button.light {
+    filter: brightness(0);
+}
+
 .button:before,
 .button:after {
   content: "";

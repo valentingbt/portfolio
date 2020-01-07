@@ -44,8 +44,10 @@ export default {
 }
 
 .card.light {
+  -webkit-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
+  box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
   border-radius: 12px;
-  border: 3px solid white;
 }
 
 .card.dark {
@@ -76,13 +78,14 @@ export default {
   padding: 0 15px 0 15px;
 }
 
-.title.light {
-  background-color: #00a6f3;
-  top: -20px;
-  padding: 0 15px 0 15px;
+.title.dark, .title.light {
+  margin: 15px 0 15px 0;
+}
+.title.dark, .title.fancy {
+  color: white;
 }
 
-.title.dark {
-  margin: 15px 0 15px 0;
+.title.light {
+  color: #262626;
 }
 </style>

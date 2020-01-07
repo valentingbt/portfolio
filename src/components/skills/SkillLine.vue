@@ -1,10 +1,10 @@
 <template>
   <div class="line">
-    <p>{{ skillName }}</p>
+    <p :class="theme">{{ skillName }}</p>
     <fa-rating
       :glyph="fa_circle"
       :inactive-color="in_color"
-      active-color="#ffffff"
+      :active-color="ac_color"
       :rating="rating"
       read-only
       :show-rating="false"
@@ -34,19 +34,23 @@ export default {
     this.fa_circle = fa_circle;
     if (this.theme === "fancy") {
       this.in_color = "#754cbd";
+      this.ac_color = "#FFFFFF";
     }
     if (this.theme === "light") {
-      this.in_color = "#00a6f3";
+      this.in_color = "#9E9E9E";
+      this.ac_color = "#262626";
     }
     if (this.theme === "dark") {
       this.in_color = "#121212";
+      this.ac_color = "#FFFFFF";
     }
   },
   data() {
     return {
       fa_circle: "", // declare the icon
       theme: localStorage.getItem("theme"),
-      in_color: "#754cbd"
+      in_color: "#754cbd",
+      ac_color: "#FFFFFF"
     };
   }
 };
@@ -66,5 +70,13 @@ p {
   font-family: "Lexend Deca", sans-serif;
   font-size: 1.5em;
   margin: 0;
+}
+
+p.dark, p.fancy {
+  color: white
+}
+
+p.light {
+  color: #262626;
 }
 </style>

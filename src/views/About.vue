@@ -2,7 +2,7 @@
   <div class="about animated" :class="[animation, theme]" v-on:keyup.enter="leavePage">
     <!-- CROSS  -->
     <div class="quit">
-      <img @click="leavePage" class="cross" src="../assets/close.svg" alt />
+      <img @click="leavePage" :class="theme" class="cross" src="../assets/close.svg" alt />
     </div>
     <!-- PAGE CONTENT -->
     <div class="content animated fadeInUp">
@@ -39,14 +39,19 @@
               {{ $t("about.usa_text1") }}
               <br />
               <span>
-            {{ $t("about.usa_text2") }}
-                <a href="http://blogvoyageusa.blogspot.com/">{{ $t("about.blog_link") }}</a>
+                {{ $t("about.usa_text2") }}
+                <a
+                  href="http://blogvoyageusa.blogspot.com/"
+                >{{ $t("about.blog_link") }}</a>
               </span>
-              <br />{{ $t("about.usa_text3") }}
+              <br />
+              {{ $t("about.usa_text3") }}
               <br />
               <span>
                 {{ $t("about.usa_text4") }}
-                <a href="https://www.instagram.com/voyage_aux_usa/">Instagram</a>
+                <a
+                  href="https://www.instagram.com/voyage_aux_usa/"
+                >Instagram</a>
               </span>
             </div>
           </div>
@@ -56,9 +61,7 @@
               <img src="@/assets/spain.svg" width="80px" alt />
               <p class="country-name">{{ $t("about.spain") }}</p>
             </div>
-            <p
-              class="country-text"
-            >{{ $t("about.spain_text") }}</p>
+            <p class="country-text">{{ $t("about.spain_text") }}</p>
           </div>
 
           <div class="country">
@@ -66,9 +69,7 @@
               <img src="@/assets/france.svg" width="80px" alt />
               <p class="country-name">FRANCE</p>
             </div>
-            <p
-              class="country-text"
-            >{{ $t("about.france_text") }}</p>
+            <p class="country-text">{{ $t("about.france_text") }}</p>
           </div>
 
           <div class="but-also">
@@ -127,22 +128,25 @@ export default {
 </script>
 
 <style>
-.about {
-  color: white;
-}
 .about.fancy {
   background: #754cbd;
   border-radius: 30px 30px 0 0;
+  color: white;
 }
 
 .about.light {
-  background: #00a6f3;
+  background: white;
   border-radius: 17px 17px 0 0;
+  -webkit-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 1);
+  color: black;
 }
 
 .about.dark {
   background: #121212;
   border-radius: 30px 30px 0 0;
+  color: white;
 }
 
 .content {
@@ -199,10 +203,6 @@ img.fancy {
   background-color: #754cbd;
 }
 
-img.light {
-  background-color: #00a6f3;
-}
-
 /* PASSION */
 
 .passion-title {
@@ -215,7 +215,7 @@ img.light {
 }
 
 .passion-title.light p {
-  color: #00a6f3;
+  filter: invert(1);
 }
 
 .passion-title.dark p {
@@ -283,7 +283,6 @@ img.light {
   .country {
     flex-wrap: wrap;
     justify-content: center;
-
   }
 
   .country-logo {
@@ -291,16 +290,16 @@ img.light {
   }
 
   .also-content {
-  overflow-x: scroll;
-  justify-content: flex-start;
-}
+    overflow-x: scroll;
+    justify-content: flex-start;
+  }
 
   .also-content .country-logo {
-  margin-right: 20px;
-}
+    margin-right: 20px;
+  }
 
-.country-logo {
-  min-width: auto;
-}
+  .country-logo {
+    min-width: auto;
+  }
 }
 </style>

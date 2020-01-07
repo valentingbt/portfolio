@@ -1,7 +1,7 @@
 <template>
   <div :class="theme" class="card shine">
-    <img v-if="theme === 'fancy'" :src="image" alt />
-    <img v-if="theme === 'light' || theme === 'dark'" :src="image_light" alt />
+    <img v-if="theme === 'fancy' || theme === 'light' " :src="image" alt />
+    <img v-if="theme === 'dark'" :src="image_light" alt />
     <p :class="theme">{{ title }}</p>
   </div>
 </template>
@@ -45,10 +45,11 @@ export default {
 }
 
 .card.light {
-  background-color: rgba(0, 191, 243, 0.9);
+  background-color: white;
   border-radius: 12px;
-  box-shadow: 0 4px 8px 0 rgba(0, 191, 243, 0.9),
-    0 6px 20px 0 rgba(0, 191, 243, 0.19);
+  -webkit-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
+  box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
 }
 
 .card.dark {
@@ -68,12 +69,9 @@ p {
   color: black;
 }
 
-p.fancy, p.dark {
+p.fancy,
+p.dark {
   color: white;
-}
-
-p.light {
-  color: #e3f2fd;
 }
 
 img {

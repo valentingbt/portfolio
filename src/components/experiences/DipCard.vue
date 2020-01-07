@@ -45,7 +45,6 @@ export default {
   align-items: center;
   justify-content: center;
 
-  color: white;
   font-family: "Lexend Deca", sans-serif;
 }
 
@@ -56,14 +55,24 @@ export default {
   transition: all 0.5s;
 }
 
+.body.fancy,
+.body.dark {
+  color: white;
+}
+
+.body.light {
+  color: #262626;
+}
+
 .body.fancy:hover {
   box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.1);
   background-color: rgb(131, 94, 196);
 }
 
 .body.light:hover {
-  box-shadow: 0 0 100px 10px rgba(255, 255, 255, 0.2);
-  background-color: rgb(51, 184, 245);
+  -webkit-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.1212);
+  -moz-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.12);
 }
 
 .body.dark:hover {
@@ -77,7 +86,9 @@ export default {
 
 .body.light {
   border-radius: 12px;
-  border: 3px solid white;
+  -webkit-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
+  box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
 }
 
 .body.dark {

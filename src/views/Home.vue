@@ -161,8 +161,9 @@ profil.dark {
 }
 
 .profil.light {
-  color: #00a6f3;
+  color: #262626;
 }
+
 
 .name {
   width: 1100px;

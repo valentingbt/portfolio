@@ -1,13 +1,13 @@
 <template>
   <div class="experiences animated" :class="[animation2,theme]">
     <div class="quit">
-      <img @click="leavePage" class="cross" src="../assets/close.svg" alt />
+      <img @click="leavePage" :class="theme" class="cross" src="../assets/close.svg" alt />
     </div>
 
     <div class="columns animated fadeInUp">
       <div class="col left">
         <div class="schools">
-          <div class="title">{{ $t("experiences.studies") }}</div>
+          <div :class="theme" class="title">{{ $t("experiences.studies") }}</div>
 
           <div class="school" v-for="school in schools" v-bind:key="school">
             <exp-card
@@ -21,7 +21,7 @@
         </div>
 
         <div class="diplomas">
-          <div class="title">{{ $t("experiences.qualifications") }}</div>
+          <div :class="theme" class="title">{{ $t("experiences.qualifications") }}</div>
           <div v-for="diploma in diplomas" v-bind:key="diploma">
             <dip-card
               :diploma="diploma.diploma"
@@ -35,7 +35,7 @@
 
       <div class="col">
         <div class="companies">
-          <div class="title">{{ $t("experiences.experience") }}</div>
+          <div :class="theme" class="title">{{ $t("experiences.experience") }}</div>
           <div v-for="company in companies" v-bind:key="company">
             <exp-card
               :date="company.date"
@@ -95,8 +95,11 @@ export default {
 }
 
 .experiences.light {
-  background: #00a6f3;
-  border-radius: 17px 17px 0 0;
+  background: white;
+  border-radius: 30px 30px 0 0;
+  -webkit-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 1);
 }
 
 .experiences.dark {

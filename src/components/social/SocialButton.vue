@@ -2,7 +2,7 @@
   <div :class="theme" class="card shine" :style="{background : backColor()}">
     <img :class="theme" :style="{background : iconColor}" :src="icon" alt />
 
-    <p :class="theme">{{ title }}</p>
+    <p :class="theme" class="title">{{ title }}</p>
   </div>
 </template>
 
@@ -24,6 +24,9 @@ export default {
     backColor() {
       if (this.theme === "dark") {
         return "#303030";
+      }
+      if (this.theme === "light") {
+        return "#FFFFFF";
       } else {
         return this.color;
       }
@@ -58,7 +61,13 @@ export default {
   filter: brightness(1.2);
   transition: 0.5s;
 }
+.title.fancy, .title.dark {
+  color: white;
+}
 
+.title.light {
+  color: #262626;
+}
 img {
   width: 40px;
   height: 40px;
