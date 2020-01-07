@@ -43,13 +43,21 @@ export default {
   background: black;
   display: flex;
   align-items: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: 0.5s;
   overflow: hidden;
 }
 
 .card.fancy {
   border-radius: 46px;
+}
+
+.card.light {
+  box-shadow: 0 0px 91px -37px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card.dark,
+.card.fancy {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card.light,
@@ -61,7 +69,8 @@ export default {
   filter: brightness(1.2);
   transition: 0.5s;
 }
-.title.fancy, .title.dark {
+.title.fancy,
+.title.dark {
   color: white;
 }
 

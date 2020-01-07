@@ -164,7 +164,6 @@ profil.dark {
   color: #262626;
 }
 
-
 .name {
   width: 1100px;
 }
@@ -220,7 +219,6 @@ profil.dark {
 
 .statut {
   width: fit-content;
-  border: 1.5px solid;
   padding: 2px 11px 2px 11px;
   margin-top: 10px;
   font-size: 1.2em;
@@ -229,6 +227,11 @@ profil.dark {
 
 .statut.fancy {
   border-radius: 30px;
+}
+
+.statut.fancy,
+.statut.dark {
+  border: 1.5px solid;
 }
 
 .statut.light,
