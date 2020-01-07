@@ -107,14 +107,14 @@
         "date": "2017 > TODAY",
         "company": "Ynov Campus",
         "city": "Nantes",
-        "description": "Five years of studies in an engineering school specialised in computer sciences.",
+        "description": "Five years of studies in an engineering school specialized in computer sciences.",
         "image": "https://image.flaticon.com/icons/svg/1201/1201175.svg"
       },
       {
         "date": "2014 > 2017",
         "company": "Marcel Callo High School",
         "city": "Redon",
-        "description": "Scientific High School, specialised in engineering, computer and electronic sciences.",
+        "description": "Scientific High School, specialized in engineering, computer and electronic sciences.",
         "image": "https://image.flaticon.com/icons/svg/265/265681.svg"
       }
     ],
