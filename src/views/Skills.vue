@@ -104,6 +104,14 @@ export default {
   border-radius: 30px 30px 0 0;
 }
 
+.skills.dark, .skills.fancy {
+  color: white;
+}
+
+.skills.light {
+  color: #262626;
+}
+
 .two-col {
   justify-content: space-between;
 }
@@ -127,7 +135,6 @@ export default {
 }
 
 .other-title {
-  color: white;
   font-family: "Lexend Deca", sans-serif;
   font-size: 2em;
   width: 100%;

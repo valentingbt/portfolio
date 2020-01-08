@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <img class="dot" src="@/assets/dot.svg" alt />
+    <img :class="theme" class="dot" src="@/assets/dot.svg" alt />
     <div class="right">
       <div :class="theme" class="body">
         <div class="card-header">
@@ -170,6 +170,11 @@ export default {
   width: 10px;
   margin-right: 20px;
 }
+
+.dot.light {
+  filter: brightness(0.3);
+}
+
 hr {
   margin: 20px 0 20px 0;
 }
@@ -246,7 +251,7 @@ hr {
   /* horizontal line */
 }
 .button.light {
-    filter: brightness(0);
+    filter: brightness(0.3);
 }
 
 .button:before,
