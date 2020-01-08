@@ -1,5 +1,9 @@
 <template>
-  <div :class="theme" class="card shine" :style="{background : backColor()}">
+  <div
+    :class="[theme, { shine : theme === 'dark' || theme === 'fancy'}]"
+    class="card"
+    :style="{background : backColor()}"
+  >
     <img :class="theme" :style="{background : iconColor}" :src="icon" alt />
 
     <p :class="theme" class="title">{{ title }}</p>
@@ -52,7 +56,13 @@ export default {
 }
 
 .card.light {
-  box-shadow: 0 0px 91px -37px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0px 91px -37px rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card.light:hover {
+  box-shadow: 0 0px 91px -37px rgba(0, 0, 0, 0.02),
+    0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .card.dark,

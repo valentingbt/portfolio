@@ -1,5 +1,5 @@
 <template>
-  <div :class="theme" class="card shine">
+  <div :class="[theme, { shine : theme === 'dark' || theme === 'fancy'}]" class="card">
     <img v-if="theme === 'fancy' || theme === 'light' " :src="image" alt />
     <img v-if="theme === 'dark'" :src="image_light" alt />
     <p :class="theme">{{ title }}</p>
@@ -50,6 +50,12 @@ export default {
   -webkit-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
   -moz-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
   box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.48);
+}
+
+.card.light:hover {
+  -webkit-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.1212);
+  -moz-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 0.12);
 }
 
 .card.dark {
