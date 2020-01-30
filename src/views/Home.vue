@@ -39,14 +39,31 @@
         />
 
         <!-- Name logo for LIGHT theme -->
-        <img
+        <!-- <img
           :class="shake"
           @click="shakeContent"
           v-if="theme === 'light'"
           class="name-light"
           src="@/assets/name_light.svg"
           alt
-        />
+        />-->
+
+        <svg v-if="theme === 'light'" class="name name-light" viewBox="0 0 960 300">
+          <symbol id="s-text">
+            <text text-anchor="middle" x="50%" y="40%">
+              <tspan x="50%" y="50%">valentin</tspan>
+              <tspan x="50%" dy="45%">Guibert</tspan>
+            </text>
+          </symbol>
+
+          <g class="g-ants">
+            <use xlink:href="#s-text" class="text-copy" />
+            <use xlink:href="#s-text" class="text-copy" />
+            <use xlink:href="#s-text" class="text-copy" />
+            <use xlink:href="#s-text" class="text-copy" />
+            <use xlink:href="#s-text" class="text-copy" />
+          </g>
+        </svg>
 
         <!-- Name logo for DARK theme -->
         <img
@@ -130,6 +147,7 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Baloo&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 .over {
   overflow: hidden;
@@ -169,9 +187,49 @@ profil.dark {
 }
 
 .name-light {
-  width: 900px;
-  -webkit-filter: drop-shadow(5px 5px 5px #00a6f3);
-  filter: drop-shadow(0 0 3px #00a6f3);
+  display: block;
+  font: 10.5em "Montserrat";
+  margin: 0 auto;
+}
+
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+  stroke: #00a6f3;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2) {
+  stroke: #00a6f3;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+  stroke: #00a6f3;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+  stroke: #00a6f3;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+  stroke: #00a6f3;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
 }
 
 .settings {

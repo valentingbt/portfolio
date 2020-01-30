@@ -179,7 +179,6 @@ export default {
 .subtitle {
   margin-right: 20px;
   white-space: nowrap;
-  color: white;
   font-size: 1.5em;
 }
 
