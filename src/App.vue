@@ -16,7 +16,7 @@ export default {
   },
   beforeCreate() {
     if (localStorage.getItem("theme") === null) {
-      localStorage.setItem("theme", "fancy");
+      localStorage.setItem("theme", "light");
     }
 
     if (localStorage.getItem("lang") === null) {

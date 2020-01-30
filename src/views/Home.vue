@@ -48,7 +48,13 @@
           alt
         />-->
 
-        <svg v-if="theme === 'light'" class="name name-light" viewBox="0 0 960 300">
+        <svg
+          :class="shake"
+          @click="shakeContent"
+          v-if="theme === 'light'"
+          class="name name-light"
+          viewBox="0 0 960 300"
+        >
           <symbol id="s-text">
             <text text-anchor="middle" x="50%" y="40%">
               <tspan x="50%" y="50%">valentin</tspan>
