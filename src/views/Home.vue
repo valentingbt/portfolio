@@ -5,7 +5,10 @@
         <!-- Change theme -->
 
         <div class="setting">
-          <div :class="{ active: theme === 'dark' }" @click="changeTheme('dark')">dark</div>
+          <div
+            :class="{ active: theme === 'dark' }"
+            @click="changeTheme('dark')"
+          >{{ $t("home.dark") }}</div>
 
           <div
             :class="{ active: theme === 'light' }"

@@ -10,7 +10,8 @@
     "experience": "EXPERIENCE",
     "about": "ABOUT",
     "fancy": "fancy",
-    "light": "light"
+    "light": "light",
+    "dark": "dark"
   },
   "skills": {
     "other": "Other skills",

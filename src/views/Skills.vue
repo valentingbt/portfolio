@@ -10,7 +10,7 @@
         <SkillCard title="Design" :items="skills.design" />
       </div>
       <div class="col">
-        <SkillCard class="middle-col" title="Web" :items="skills.web" />
+        <SkillCard class="middle-col" title="Web & Mobile" :items="skills.web" />
       </div>
       <div class="col two-col">
         <SkillCard :title="$i18n.t('skills.software')" :items="skills.software" />
