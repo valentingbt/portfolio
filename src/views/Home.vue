@@ -30,32 +30,12 @@
         </div>
       </div>
 
-      <div class="name">
-        <!-- Name logo for FANCY theme -->
-        <img
-          :class="shake"
-          @click="shakeContent"
-          v-if="theme === 'fancy'"
-          class="name"
-          src="@/assets/name.svg"
-          alt
-        />
-
-        <!-- Name logo for LIGHT theme -->
-        <!-- <img
-          :class="shake"
-          @click="shakeContent"
-          v-if="theme === 'light'"
-          class="name-light"
-          src="@/assets/name_light.svg"
-          alt
-        />-->
+        <!-- NAME -->
 
         <svg
           :class="shake"
           @click="shakeContent"
-          v-if="theme === 'light'"
-          class="name name-light"
+          class="name"
           viewBox="0 0 960 300"
         >
           <symbol id="s-text">
@@ -66,24 +46,13 @@
           </symbol>
 
           <g class="g-ants">
-            <use xlink:href="#s-text" class="text-copy" />
-            <use xlink:href="#s-text" class="text-copy" />
-            <use xlink:href="#s-text" class="text-copy" />
-            <use xlink:href="#s-text" class="text-copy" />
-            <use xlink:href="#s-text" class="text-copy" />
+            <use xlink:href="#s-text" :class="theme" class="text-copy" />
+            <use xlink:href="#s-text" :class="theme" class="text-copy" />
+            <use xlink:href="#s-text" :class="theme" class="text-copy" />
+            <use xlink:href="#s-text" :class="theme" class="text-copy" />
+            <use xlink:href="#s-text" :class="theme" class="text-copy" />
           </g>
         </svg>
-
-        <!-- Name logo for DARK theme -->
-        <img
-          :class="shake"
-          @click="shakeContent"
-          v-if="theme === 'dark'"
-          class="name"
-          src="@/assets/name_dark.svg"
-          alt
-        />
-      </div>
 
       <!-- Current status -->
       <div :class="[bounce,theme]" class="statut" @click="changeStatut">{{ $t("home.statut")[i] }}</div>
@@ -192,18 +161,22 @@ profil.dark {
 }
 
 .name {
-  width: 1100px;
-}
-
-.name-light {
   display: block;
   font: 10.5em "Montserrat";
   margin: 0 auto;
+  width: 1100px;
+}
+
+.text-copy.dark {
+    stroke: #ffffff;
+}
+
+.text-copy.light {
+    stroke: #00a6f3;
 }
 
 .text-copy {
   fill: none;
-  stroke: white;
   stroke-dasharray: 6% 29%;
   stroke-width: 5px;
   stroke-dashoffset: 0%;
@@ -211,28 +184,43 @@ profil.dark {
 }
 
 .text-copy:nth-child(1) {
-  stroke: #00a6f3;
   animation-delay: -1;
 }
 
+.text-copy.fancy:nth-child(1) {
+      stroke: #0839C2;
+}
+
 .text-copy:nth-child(2) {
-  stroke: #00a6f3;
   animation-delay: -2s;
 }
 
+.text-copy.fancy:nth-child(2) {
+      stroke: #266EF6;
+}
+
 .text-copy:nth-child(3) {
-  stroke: #00a6f3;
   animation-delay: -3s;
 }
 
+.text-copy.fancy:nth-child(3) {
+      stroke: #47C9FF;
+}
+
 .text-copy:nth-child(4) {
-  stroke: #00a6f3;
   animation-delay: -4s;
 }
 
+.text-copy.fancy:nth-child(4) {
+      stroke: #82E9FF;
+}
+
 .text-copy:nth-child(5) {
-  stroke: #00a6f3;
   animation-delay: -5s;
+}
+
+.text-copy.fancy:nth-child(5) {
+      stroke: #B8F2FF;
 }
 
 @keyframes stroke-offset {
