@@ -57,7 +57,7 @@
         >
           <symbol id="s-text">
             <text text-anchor="middle" x="50%" y="40%">
-              <tspan x="50%" y="50%">valentin</tspan>
+              <tspan x="50%" y="50%">Valentin</tspan>
               <tspan x="50%" dy="45%">Guibert</tspan>
             </text>
           </symbol>

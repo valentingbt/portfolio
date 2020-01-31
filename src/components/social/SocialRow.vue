@@ -13,7 +13,7 @@
       <a href="mailto:valentin.guibert@ynov.com">
           <SocialButton 
             class="middle" 
-            title="valentinguibert@ynov.com" 
+            title="valentin.guibert@ynov.com" 
             :icon="require('../../assets/email.svg')" 
             :color="'#6dbef6'"
             :iconColor="'#2196F3'"/>
