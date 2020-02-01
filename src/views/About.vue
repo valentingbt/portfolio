@@ -9,7 +9,7 @@
       <div class="title">{{ $t('home.about') }}</div>
       <div class="who-title">
         <span class="subtitle">{{ $t('about.who') }}</span>
-        <span class="who-hr"></span>
+        <span :class="theme" class="who-hr"></span>
       </div>
       <MessageBlock
         :icon="require('@/assets/photo.svg')"
@@ -40,7 +40,7 @@
               <br />
               <span>
                 {{ $t("about.usa_text2") }}
-                <a
+                <a target="_blank" rel="noopener noreferrer"
                   href="http://blogvoyageusa.blogspot.com/"
                 >{{ $t("about.blog_link") }}</a>
               </span>
@@ -49,7 +49,7 @@
               <br />
               <span>
                 {{ $t("about.usa_text4") }}
-                <a
+                <a target="_blank" rel="noopener noreferrer"
                   href="https://www.instagram.com/voyage_aux_usa/"
                 >Instagram</a>
               </span>
@@ -140,7 +140,7 @@ export default {
   -webkit-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 1);
   -moz-box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 1);
   box-shadow: 0px 0px 91px -37px rgba(0, 0, 0, 1);
-  color: black;
+  color: #262626;
 }
 
 .about.dark {
@@ -185,6 +185,13 @@ export default {
 .who-hr {
   width: 100%;
   height: 5px;
+}
+
+.who-hr.light {
+  background-color: #262626;
+}
+
+.who-hr.dark, .who-hr.fancy {
   background-color: white;
 }
 
