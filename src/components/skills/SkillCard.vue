@@ -4,7 +4,7 @@
       <div :class="theme" class="title">{{ title }}</div>
     </div>
 
-    <div class="lines" v-for="item in items" v-bind:key="item">
+    <div class="lines" v-for="(item,idx) in items" v-bind:key="idx">
       <SkillLine :rating="item.rating" :skillName="item.name" />
     </div>
   </div>
@@ -20,7 +20,7 @@ export default {
   },
   props: {
     title: String,
-    items: Object
+    items: Array
   },
   data() {
     return {

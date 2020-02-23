@@ -77,6 +77,8 @@ export default {
     const el = document.body;
     setTimeout(() => el.classList.remove("over").bind(this), 1100);
     scroll(0, 0);
+    const el = document.body;
+    setTimeout(() => el.classList.remove("over"), 1100);
   }
 };
 </script>

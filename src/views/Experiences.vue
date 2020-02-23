@@ -9,7 +9,7 @@
         <div class="schools">
           <div :class="theme" class="title">{{ $t("experiences.studies") }}</div>
 
-          <div class="school" v-for="school in schools" v-bind:key="school">
+          <div class="school" v-for="(school,idx) in schools" v-bind:key="idx">
             <exp-card
               :date="school.date"
               :company="school.company"
@@ -22,7 +22,7 @@
 
         <div class="diplomas">
           <div :class="theme" class="title">{{ $t("experiences.qualifications") }}</div>
-          <div v-for="diploma in diplomas" v-bind:key="diploma">
+          <div v-for="(diploma,idx) in diplomas" v-bind:key="idx">
             <dip-card
               :diploma="diploma.diploma"
               :option="diploma.option"
@@ -36,7 +36,7 @@
       <div class="col">
         <div class="companies">
           <div :class="theme" class="title">{{ $t("experiences.experience") }}</div>
-          <div v-for="company in companies" v-bind:key="company">
+          <div v-for="(company,idx) in companies" v-bind:key="idx">
             <exp-card
               :date="company.date"
               :company="company.company"
@@ -82,7 +82,7 @@ export default {
   },
   mounted() {
     const el = document.body;
-    setTimeout(() => el.classList.remove("over").bind(this), 1100);
+    setTimeout(() => el.classList.remove("over"), 1100);
     scroll(0, 0);
   }
 };

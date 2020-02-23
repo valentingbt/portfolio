@@ -26,8 +26,8 @@
           <br />
           <div class="minicont">
             <MiniProj
-              v-for="info in infos"
-              v-bind:key="info"
+              v-for="(info,idx) in infos"
+              v-bind:key="idx"
               :title="info.title"
               :link="info.link"
               :background="info.background"

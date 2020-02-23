@@ -2,7 +2,6 @@
   <div class="row">
     <router-link to="/skills">
       <MenuButton
-        @click.native="leavePage"
         :title="$i18n.t('home.skills')"
         :image="require('../../assets/skill.svg')"
         :image_light="require('../../assets/skill_light.svg')"

@@ -8,10 +8,10 @@
       :rating="rating"
       read-only
       :show-rating="false"
-      border-width="2"
+      :border-width=2
       border-color="#ffffff"
-      item-size="17"
-      spacing="1"
+      :item-size=17
+      :spacing=1
     ></fa-rating>
   </div>
 </template>
